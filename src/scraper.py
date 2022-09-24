@@ -24,6 +24,48 @@ def httpsGet(URL):
     soup1 = BeautifulSoup(page.content, "html.parser")
     return BeautifulSoup(soup1.prettify(), "html.parser") 
 
+    
+def httpsGetTarget(URL,query):
+    """
+    The httpsGetTarget function makes HTTP called to the requested URL with custom headers and params specific to Target website
+    """
+    headers = {
+    'authority': 'redsky.target.com',
+    'accept': 'application/json',
+    'accept-language': 'en-US,en;q=0.9,mr;q=0.8',
+    'origin': 'https://www.target.com',
+    'referer': URL,
+    'sec-ch-ua': '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+    }
+
+    params = {
+    'key': 'ff457966e64d5e877fdbad070f276d18ecec4a01',
+    'channel': 'WEB',
+    'count': '24',
+    'default_purchasability_filter': 'true',
+    'include_sponsored': 'true',
+    'keyword': query,
+    'offset': '0',
+    'page': f'/s/{query}',
+    'platform': 'desktop',
+    'pricing_store_id': '961',
+    'scheduled_delivery_store_id': '961',
+    'store_ids': '961,2721,1932,2785,3255',
+    'useragent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+    'visitor_id': '018366FA85BE0201AE0C2E6660BAB7D2',
+    'zip': '27606',
+    }   
+
+    response = requests.get('https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2', params=params, headers=headers)
+    results_json = response.json()
+    return results_json
+
 def searchAmazon(query):
     """
     The searchAmazon function scrapes amazon.com
@@ -53,3 +95,14 @@ def searchWalmart(query):
         product = formatter.formatResult("walmart", titles, prices, links)
         products.append(product)
     return products
+
+
+def searchTarget(query):
+    """
+    The searchTarget function scrapes hidden API of target.com
+    """
+    query = formatter.formatSearchQuery(query)
+    URL = f'https://www.target.com/s?searchTerm={query}'
+    page = httpsGetTarget(URL,query)
+
+    return None
