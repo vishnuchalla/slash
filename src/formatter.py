@@ -14,6 +14,7 @@ the required format.
 
 from datetime import datetime
 import math
+import pytz
 
 def formatResult(website, titles, prices, links):
     """
@@ -40,7 +41,7 @@ def formatResult(website, titles, prices, links):
             link = f'www.{website}.com{link}'
     
     product = {
-        'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+        'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
         "title": formatTitle(title),
         "price": price, 
         # "link":f'www.{website}.com{link}', 
