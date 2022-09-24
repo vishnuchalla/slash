@@ -35,13 +35,16 @@ def formatResult(website, titles, prices, links):
     if website == "target":
         link = links
     else:
-        if links: link = links[0]['href']
-
+        if links: 
+            link = links[0]['href']
+            link = f'www.{website}.com{link}'
+    
     product = {
         'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         "title": formatTitle(title),
         "price": price, 
         # "link":f'www.{website}.com{link}', 
+        # "link": link, 
         "website": website,
     }
     return product
