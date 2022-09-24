@@ -14,6 +14,7 @@ the required format.
 
 from datetime import datetime
 import math
+import pytz
 
 
 def formatResult(website, titles, prices, links, ratings):
@@ -22,20 +23,33 @@ def formatResult(website, titles, prices, links, ratings):
     necessary values from the HTML code. Ex. extracting a price '$19.99' from
     a paragraph tag.
     """
+
     title, price, link, rating = '', '', '', 0
-    if titles:
-        title = titles[0].get_text().strip()
-    if prices:
-        price = prices[0].get_text().strip()
-    if links:
-        link = links[0]['href']
+    if website == "target":
+        title = titles
+    else:
+        if titles: title = titles[0].get_text().strip()
+    
+    if website == "target":
+        price = prices
+    else: 
+        if prices: price = prices[0].get_text().strip()
+
+    if website == "target":
+        link = links
+    else:
+        if links: 
+            link = links[0]['href']
+            link = f'www.{website}.com{link}'
     if ratings:
         rating = ratings[0].get_text().split()[0]
+    
     product = {
-        'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
+        'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
         "title": formatTitle(title),
         "price": price,
         # "link":f'www.{website}.com{link}', 
+        # "link": link, 
         "website": website,
         "rating": rating
     }
