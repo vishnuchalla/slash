@@ -22,9 +22,21 @@ def formatResult(website, titles, prices, links):
     a paragraph tag.
     """
     title, price, link = '', '', ''
-    if titles: title = titles[0].get_text().strip()
-    if prices: price = prices[0].get_text().strip()
-    if links: link = links[0]['href']
+    if website == "target":
+        title = titles
+    else:
+        if titles: title = titles[0].get_text().strip()
+    
+    if website == "target":
+        price = prices
+    else: 
+        if prices: price = prices[0].get_text().strip()
+
+    if website == "target":
+        link = links
+    else:
+        if links: link = links[0]['href']
+
     product = {
         'timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
         "title": formatTitle(title),

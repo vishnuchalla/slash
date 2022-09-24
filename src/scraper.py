@@ -104,5 +104,15 @@ def searchTarget(query):
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.target.com/s?searchTerm={query}'
     page = httpsGetTarget(URL,query)
+    results = page['data']['search']['products']
+    products = []
+    for i in range(len(results)):
+        titles = results[i]['item']['product_description']['title'].replace('&#8482;','') 
+        prices = results[i]['price']['formatted_current_price']
+        links = URL + str(results[i]['item']['primary_brand']['canonical_url'])
+        product = formatter.formatResult("target",titles, prices, links)
 
-    return None
+        # @Srujan, the code for scraping ratings for target website is as follows:
+        # ratings = results[res]['ratings_and_reviews']['statistics']['rating']['average']
+        products.append(product)
+    return products
