@@ -24,11 +24,13 @@ def main():
     
     products1 = scraper.searchAmazon(args.search)
     products2 = scraper.searchWalmart(args.search)
+    products3 = scraper.searchTarget(args.search)
 
     for sortBy in args.sort:
         products1 = formatter.sortList(products1, sortBy, args.des)[:args.num]
         products2 = formatter.sortList(products2, sortBy, args.des)[:args.num]
-        results = products1 + products2
+        products3 = formatter.sortList(products3, sortBy, args.des)[:args.num]
+        results = products1 + products2 + products3
         results = formatter.sortList(results, sortBy, args.des)
 
 
