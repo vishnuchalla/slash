@@ -16,13 +16,15 @@ from datetime import datetime
 import math
 import pytz
 
-def formatResult(website, titles, prices, links):
+
+def formatResult(website, titles, prices, links, ratings):
     """
     The formatResult function takes the scraped HTML as input, and extracts the 
     necessary values from the HTML code. Ex. extracting a price '$19.99' from
     a paragraph tag.
     """
-    title, price, link = '', '', ''
+
+    title, price, link, rating = '', '', '', 0
     if website == "target":
         title = titles
     else:
@@ -39,16 +41,20 @@ def formatResult(website, titles, prices, links):
         if links: 
             link = links[0]['href']
             link = f'www.{website}.com{link}'
+    if ratings:
+        rating = ratings[0].get_text().split()[0]
     
     product = {
         'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
         "title": formatTitle(title),
-        "price": price, 
+        "price": price,
         # "link":f'www.{website}.com{link}', 
         # "link": link, 
         "website": website,
+        "rating": rating
     }
     return product
+
 
 def sortList(arr, sortBy, reverse):
     """
@@ -57,11 +63,10 @@ def sortList(arr, sortBy, reverse):
     """
     if sortBy == "pr":
         return sorted(arr, key=lambda x: getNumbers(x["price"]), reverse=reverse)
-    # To-do: sort by rating
     elif sortBy == "ra":
-        # return sorted(arr, key=lambda x: getNumbers(x.price), reverse=reverse)
-        pass
+        return sorted(arr, key=lambda x: getNumbers(x.get("rating", '')), reverse=reverse)
     return arr
+
 
 def formatSearchQuery(query):
     """
@@ -70,25 +75,30 @@ def formatSearchQuery(query):
     """
     return query.replace(" ", "+")
 
+
 def formatTitle(title):
     """
     The formatTitle function formats titles extracted from the scraped HTML code.
     """
-    if(len(title) > 40):
+    if (len(title) > 40):
         return title[:40] + "..."
     return title
+
 
 def getNumbers(st):
     """
     The getNumbers function extracts float values (price) from a string.
     Ex. it extracts 10.99 from '$10.99' or 'starting at $10.99'
     """
-    ans = ''
-    for ch in st:
-        if (ch >= '0' and ch <= '9') or ch == '.':
-            ans += ch
-    try:
-        ans = float(ans)
-    except:
-        ans = math.inf
-    return ans
+    if type(st) == str:
+        ans = ''
+        for ch in st:
+            if (ch >= '0' and ch <= '9') or ch == '.':
+                ans += ch
+        try:
+            ans = float(ans)
+        except:
+            ans = math.inf
+        return ans
+    else:
+        return st

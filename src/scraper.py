@@ -77,7 +77,8 @@ def searchAmazon(query):
     products = []
     for res in results:
         titles, prices, links = res.select("h2 a span"), res.select("span.a-price span"), res.select("h2 a.a-link-normal")
-        product = formatter.formatResult("amazon",  titles, prices, links)
+        ratings = res.select("span.a-icon-alt")
+        product = formatter.formatResult("amazon",  titles, prices, links, ratings)
         products.append(product)
     return products
 
@@ -88,11 +89,16 @@ def searchWalmart(query):
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.walmart.com/search?q={query}'
     page = httpsGet(URL)
-    results = page.findAll("div", {"data-item-id":True})
+    results = page.findAll("div", {"data-item-id": True})
     products = []
     for res in results:
         titles, prices, links = res.select("span.lh-title"), res.select("div.lh-copy"), res.select("a")
-        product = formatter.formatResult("walmart", titles, prices, links)
+        ratings = res.select("span.w_EU")
+        if len(ratings) > 2:
+            ratings = [ratings[2]]
+        else:
+            ratings = None
+        product = formatter.formatResult("walmart", titles, prices, links, ratings)
         products.append(product)
     return products
 
