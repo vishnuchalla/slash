@@ -21,7 +21,7 @@ def main():
     parser.add_argument('--link', action='store_true', help="Show links in the table")
     parser.add_argument('--des', action='store_true', help="Sort in descending (non-increasing) order")
     args = parser.parse_args()
-    
+
     products1 = scraper.searchAmazon(args.search)
     products2 = scraper.searchWalmart(args.search)
     products3 = scraper.searchTarget(args.search)
@@ -32,7 +32,6 @@ def main():
         products3 = formatter.sortList(products3, sortBy, args.des)[:args.num]
         results = products1 + products2 + products3
         results = formatter.sortList(results, sortBy, args.des)
-
 
     print()
     print()

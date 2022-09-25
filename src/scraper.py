@@ -115,13 +115,14 @@ def searchTarget(query):
     for i in range(len(results)):
         titles = results[i]['item']['product_description']['title'].replace('&#8482;','') 
         prices = results[i]['price']['formatted_current_price']
+        if('parent' in results[i].keys()):
+            ratings = results[i]['parent']['ratings_and_reviews']['statistics']['rating']['average']
+        else:
+            ratings = results[i]['ratings_and_reviews']['statistics']['rating']['average']
         if 'primary_brand' in results[i]['item']:
             links = URL + str(results[i]['item']['primary_brand']['canonical_url'])
         else:
             links=''
-        product = formatter.formatResult("target",titles, prices, links)
-
-        # @Srujan, the code for scraping ratings for target website is as follows:
-        # ratings = results[res]['ratings_and_reviews']['statistics']['rating']['average']
+        product = formatter.formatResult("target",titles, prices, links, ratings)
         products.append(product)
     return products
