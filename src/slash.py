@@ -10,6 +10,7 @@ this file. If not, please write to: secheaper@gmail.com
 import argparse
 import scraper
 import formatter
+import csv_utils
 from tabulate import tabulate
 
 
@@ -36,6 +37,9 @@ def main():
     print()
     print()
     print(tabulate(results, headers="keys", tablefmt="github"))
+    print("\nWriting data to items.csv\n")
+    csv_utils.write_data(results)
+    print("Done :)")
     print()
     print()
 
