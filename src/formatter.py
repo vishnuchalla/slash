@@ -41,8 +41,12 @@ def formatResult(website, titles, prices, links, ratings):
         if links: 
             link = links[0]['href']
             link = f'www.{website}.com{link}'
-    if ratings:
-        rating = ratings[0].get_text().split()[0]
+    
+    if website == "target":
+        rating = ratings
+    else:
+        if ratings:
+            rating = ratings[0].get_text().split()[0]
     
     product = {
         'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
