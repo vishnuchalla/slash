@@ -54,10 +54,10 @@ pip3 install -r requirements.txt
 cd src
 
 For Mac
-python3 slash.py --search socks
+python3 slash.py --search icecream
 
 For Windows
-python slash.py --search socks
+python slash.py --search icecream
 ```
 :golf: Flags and Command Line Arguments
 ---
