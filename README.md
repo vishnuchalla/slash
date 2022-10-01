@@ -120,6 +120,7 @@ python slash.py --search "philips hue" --sort pr
 | 01/10/2022 13:58:01 EDT -0400 | Philips Hue White and Color Ambiance Blu... | $39.99     | target    | 3.42     |
 | 01/10/2022 13:58:01 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | Now $49.68 | walmart   | N.A      |
 | 01/10/2022 13:58:01 EDT -0400 | Philips Hue 2pk BR30 Warm-To-Cool LED Sm... | $49.99     | target    | 4.73     |
+```
 #### 3. Sort Order
 The ```--des``` flag can be set to sort the requested products in a non-increasing order. This flag will be 
 actually used when coupled with ```--sort```. Example:
