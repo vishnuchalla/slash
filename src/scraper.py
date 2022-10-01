@@ -99,7 +99,8 @@ def searchWalmart(query):
         else:
             ratings = None
         product = formatter.formatResult("walmart", titles, prices, links, ratings)
-        products.append(product)
+        if prices is not None:
+            products.append(product)
     return products
 
 
