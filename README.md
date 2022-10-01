@@ -85,14 +85,17 @@ For Windows
 python slash.py --search "philips hue"
 ```
 ```
-| timestamp           | title                                       | price   | website   |
-|---------------------|---------------------------------------------|---------|-----------|
-| 30/09/2021 12:00:58 | Philips Hue White and Color Ambiance A19... | $134.99 | amazon    |
-| 30/09/2021 12:00:58 | PARMIDA LED 5/6 inch Smart Recessed Ligh... | $20.99  | amazon    |
-| 30/09/2021 12:00:58 | Philips Hue 548610 CFH Smart Light A19, ... | $79.99  | amazon    |
-| 30/09/2021 12:01:00 | Philips Hue 3-Pack 60W White Bluetooth S... | $37.88  | walmart   |
-| 30/09/2021 12:01:00 | Philips Hue Smart Stand Alone Bridge, Hu... | $57.92  | walmart   |
-| 30/09/2021 12:01:00 | Philips Hue White and Color Ambiance Sma... | $89.99  | walmart   |
+| timestamp                     | title                                       | price      | website   | rating   |
+|-------------------------------|---------------------------------------------|------------|-----------|----------|
+| 01/10/2022 13:56:08 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
+| 01/10/2022 13:56:08 EDT -0400 | Philips Hue White & Color Ambiance White... | $119.99    | amazon    | 4.7      |
+| 01/10/2022 13:56:08 EDT -0400 | PHILIPS Hue 2pk A19 LED Starter Kit with... | $69.99     | amazon    | 4.7      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | Now $49.68 | walmart   | N.A      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue 3-Pack 60W White Bluetooth S... | $69.00     | walmart   | N.A      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue LED 60-Watt White A19 Dimmab... | $52.99     | walmart   | N.A      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99    | target    | 4.63     |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue A19 75W Smart LED Bulb          | $54.99     | target    | 4.3      |
 ```
 #### 2. Sorting
 ```--sort``` accepts one or more arguments that determine how the tool sorts and filters the requested products
