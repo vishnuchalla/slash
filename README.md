@@ -185,9 +185,9 @@ python slash.py --search "philips hue" --num 5
   <tr>
     <td align="center"><sub><b>Shubham Mankar</b></sub></td>
     <td align="center"><sub><b>Pratik Devnani</b></sub></td>
-    <td align="center"><sub><b>Moksh Jain</b></sub></td>
-    <td align="center"><sub><b>Rahil Sarvaiya</b></sub></td>
-    <td align="center"><sub><b>Anushi Keswani</b></sub></td>
+    <td align="center"><sub><b>Vishnu Challa</b></sub></td>
+    <td align="center"><sub><b>Sairam Sakhamuri</b></sub></td>
+    <td align="center"><sub><b>Kanchan Rawat</b></sub></td>
   </tr>
 </table>
 
