@@ -183,7 +183,7 @@ python slash.py --search "philips hue" --num 5
 
 <table>
   <tr>
-    <td align="center"><a href="www.google.com" rel="search" target="_blank">Srujan Ponnur</a></td>
+    <td align="center"><a href="https://www.google.com/search?q=Some text">Srujan Ponnur</a></td>
     <td align="center"><sub><b>Sumanth</b></sub></td>
     <td align="center"><sub><b>Vishnu Challa</b></sub></td>
     <td align="center"><sub><b>Sairam Sakhamuri</b></sub></td>
