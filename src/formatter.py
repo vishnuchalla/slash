@@ -24,7 +24,7 @@ def formatResult(website, titles, prices, links, ratings):
     a paragraph tag.
     """
 
-    title, price, link, rating = '', '', '', 0
+    title, price, link, rating = '', '', '', ''
     if website == "target":
         title = titles
     else:
@@ -51,11 +51,11 @@ def formatResult(website, titles, prices, links, ratings):
     product = {
         'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
         "title": formatTitle(title),
-        "price": price,
+        "price": price if price != '' else 'N.A',
         # "link":f'www.{website}.com{link}', 
         # "link": link, 
         "website": website,
-        "rating": rating
+        "rating": rating if rating != '' else 'N.A'
     }
     return product
 
@@ -69,6 +69,8 @@ def sortList(arr, sortBy, reverse):
         return sorted(arr, key=lambda x: getNumbers(x["price"]), reverse=reverse)
     elif sortBy == "ra":
         return sorted(arr, key=lambda x: getNumbers(x.get("rating", '')), reverse=reverse)
+    elif sortBy == "all":
+        return sorted(arr, key=lambda x: (getNumbers(x["price"]), getNumbers(x.get("rating", ''))), reverse=True)
     return arr
 
 
@@ -96,13 +98,15 @@ def getNumbers(st):
     """
     if type(st) == str:
         ans = ''
+        if st == 'N.A':
+            return -math.inf
         for ch in st:
             if (ch >= '0' and ch <= '9') or ch == '.':
                 ans += ch
         try:
             ans = float(ans)
         except:
-            ans = math.inf
+            ans = -math.inf
         return ans
     else:
         return st
