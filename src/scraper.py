@@ -124,5 +124,6 @@ def searchTarget(query):
         else:
             links=''
         product = formatter.formatResult("target",titles, prices, links, ratings)
-        products.append(product)
+        if prices is not None:
+            products.append(product)
     return products
