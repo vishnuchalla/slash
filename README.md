@@ -199,7 +199,7 @@ python slash.py --search "philips hue" --num 5
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/srujanponnur">Srujan Ponnur</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/sumanth-somasundar">Sumanth Somasundar</a></td>
-    <td align="center"><sub><b>Vishnu Challa</b></sub></td>
+    <td align="center"><a href="https://www.linkedin.com/in/vishnuchalla/">Vishnu Challa</a></td>
     <td align="center"><sub><b>Sairam Sakhamuri</b></sub></td>
     <td align="center"><sub><b>Kanchan Rawat</b></sub></td>
   </tr>
