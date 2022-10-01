@@ -201,7 +201,7 @@ python slash.py --search "philips hue" --num 5
     <td align="center"><a href="https://www.linkedin.com/in/sumanth-somasundar">Sumanth Somasundar</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/vishnuchalla/">Vishnu Challa</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/svnsairam/">Sairam Sakhamuri</a></td>
-    <td align="center"><sub><b>Kanchan Rawat</b></sub></td>
+    <td align="center"><a href="https://www.linkedin.com/in/kanchan-rawat-793753a2/">Kanchan Rawat</a></td>
   </tr>
 </table>
 
