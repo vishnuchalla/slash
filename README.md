@@ -184,8 +184,8 @@ python slash.py --search "philips hue" --num 5
 <table>
   <tr>
     <td align="center"><a href="http://www.shubhammankar.com/"><img src="https://avatars.githubusercontent.com/u/29366125?v=4" width="75px;" alt=""/><br /><sub><b>Shubham Mankar</b></sub></a></td>
-    <td align="center"><a href="https://github.com/pratikdevnani"><img src="https://avatars.githubusercontent.com/u/43350493?v=4" width="75px;" alt=""/><br /><sub><b>Pratik Devnani</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/moksh98"><img src="https://avatars.githubusercontent.com/u/29693765?v=4" width="75px;" alt=""/><br /><sub><b>Moksh Jain</b></sub></a><br /></td>
+    <td align="center"><sub><b>Pratik Devnani</b></sub></td>
+    <td align="center"><sub><b>Moksh Jain</b></sub></td>
     <td align="center"><sub><b>Rahil Sarvaiya</b></sub></td>
     <td align="center"><sub><b>Anushi Keswani</b></sub></td>
   </tr>
