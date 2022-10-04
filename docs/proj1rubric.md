@@ -19,8 +19,8 @@ Sr. No| Notes|Self-assement|Evidence|
 13| Use of version control tools|3|Git is used thoroughly through the project|
 14| Use of  style checkers |3||
 15| Use of code  formatters. |3||
-16| Use of syntax checkers. | 3 |https://github.com/secheaper/slash/blob/main/.github/workflows/python-app.yml|
-17| Use of code coverage |3|https://github.com/secheaper/slash/blob/main/.github/workflows/workflow.yml|
+16| Use of syntax checkers. | 3 |https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
+17| Use of code coverage |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml|
 18| other automated analysis tools|2||
 19| test cases exist|3|https://github.com/secheaper/slash/blob/main/tests/test_app.py|
 20| test cases are routinely executed|3|https://github.com/secheaper/slash/actions/workflows/python-app.yml|
