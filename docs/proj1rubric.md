@@ -9,7 +9,7 @@ Sr. No| Notes|Self-assement|Evidence|
 3| Number of commits|3|https://github.com/secheaper/slash/pulse|
 4| Number of commits: by different people|3|https://github.com/secheaper/slash/pulse|
 5| Issues reports: there are **many**|3|[Issues](https://github.com/vishnuchalla/slash/issues)|
-6|  issues are being  closed|3|[Closed Issues](https://github.com/secheaper/slash/issues?q=is%3Aissue+is%3Aclosed+)|
+6|  issues are being  closed|3|[Closed Issues](https://github.com/vishnuchalla/slash/issues?q=is%3Aissue+is%3Aclosed)|
 7| DOI badge: exists |3|Present in [README](https://github.com/secheaper/slash/blob/main/README.md)|
 8|Docs: doco generated , format not ugly|3 |https://github.com/secheaper/slash/tree/main/docs|
 9|Docs: what: point descriptions of each class/function (in isolation) |3|https://github.com/secheaper/slash/blob/main/README.md|
