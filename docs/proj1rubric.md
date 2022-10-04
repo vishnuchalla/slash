@@ -15,7 +15,7 @@ Sr. No| Notes|Self-assement|Evidence|
 9|Docs: what: point descriptions of each class/function (in isolation) |3|https://github.com/secheaper/slash/blob/main/README.md|
 10|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3|[Examples](https://github.com/vishnuchalla/slash/tree/dev#card_index_dividers-some-examples)|
 11|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|[Section in README](https://github.com/vishnuchalla/slash/tree/dev#page_facing_up-why)|
-12|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/secheaper/slash/blob/main/assets/demo.gif | 
+12|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/vishnuchalla/slash/blob/main/assets/demo.gif | 
 13| Use of version control tools|3|Git is used thoroughly through the project|
 14| Use of  style checkers |3||
 15| Use of code  formatters. |3||
