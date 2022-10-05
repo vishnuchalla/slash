@@ -79,7 +79,8 @@ def searchAmazon(query):
         titles, prices, links = res.select("h2 a span"), res.select("span.a-price span"), res.select("h2 a.a-link-normal")
         ratings = res.select("span.a-icon-alt")
         product = formatter.formatResult("amazon",  titles, prices, links, ratings)
-        products.append(product)
+        if prices is not None:
+            products.append(product)
     return products
 
 def searchWalmart(query):
@@ -99,7 +100,8 @@ def searchWalmart(query):
         else:
             ratings = None
         product = formatter.formatResult("walmart", titles, prices, links, ratings)
-        products.append(product)
+        if prices is not None:
+            products.append(product)
     return products
 
 
@@ -124,5 +126,6 @@ def searchTarget(query):
         else:
             links=''
         product = formatter.formatResult("target",titles, prices, links, ratings)
-        products.append(product)
+        if prices is not None:
+            products.append(product)
     return products

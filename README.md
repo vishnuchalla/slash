@@ -54,10 +54,10 @@ pip3 install -r requirements.txt
 cd src
 
 For Mac
-python3 slash.py --search socks
+python3 slash.py --search icecream
 
 For Windows
-python slash.py --search socks
+python slash.py --search icecream
 ```
 :golf: Flags and Command Line Arguments
 ---
@@ -85,14 +85,17 @@ For Windows
 python slash.py --search "philips hue"
 ```
 ```
-| timestamp           | title                                       | price   | website   |
-|---------------------|---------------------------------------------|---------|-----------|
-| 30/09/2021 12:00:58 | Philips Hue White and Color Ambiance A19... | $134.99 | amazon    |
-| 30/09/2021 12:00:58 | PARMIDA LED 5/6 inch Smart Recessed Ligh... | $20.99  | amazon    |
-| 30/09/2021 12:00:58 | Philips Hue 548610 CFH Smart Light A19, ... | $79.99  | amazon    |
-| 30/09/2021 12:01:00 | Philips Hue 3-Pack 60W White Bluetooth S... | $37.88  | walmart   |
-| 30/09/2021 12:01:00 | Philips Hue Smart Stand Alone Bridge, Hu... | $57.92  | walmart   |
-| 30/09/2021 12:01:00 | Philips Hue White and Color Ambiance Sma... | $89.99  | walmart   |
+| timestamp                     | title                                       | price      | website   | rating   |
+|-------------------------------|---------------------------------------------|------------|-----------|----------|
+| 01/10/2022 13:56:08 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
+| 01/10/2022 13:56:08 EDT -0400 | Philips Hue White & Color Ambiance White... | $119.99    | amazon    | 4.7      |
+| 01/10/2022 13:56:08 EDT -0400 | PHILIPS Hue 2pk A19 LED Starter Kit with... | $69.99     | amazon    | 4.7      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | Now $49.68 | walmart   | N.A      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue 3-Pack 60W White Bluetooth S... | $69.00     | walmart   | N.A      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue LED 60-Watt White A19 Dimmab... | $52.99     | walmart   | N.A      |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99    | target    | 4.63     |
+| 01/10/2022 13:56:10 EDT -0400 | Philips Hue A19 75W Smart LED Bulb          | $54.99     | target    | 4.3      |
 ```
 #### 2. Sorting
 ```--sort``` accepts one or more arguments that determine how the tool sorts and filters the requested products
@@ -106,14 +109,17 @@ For Windows
 python slash.py --search "philips hue" --sort pr
 ```
 ```
-| timestamp           | title                                       | price   | website   |
-|---------------------|---------------------------------------------|---------|-----------|
-| 30/09/2021 12:02:34 | Philips Hue White A19 60W Smart Dimmable... | $14.88  | walmart   |
-| 30/09/2021 12:02:33 | T POWER 24V Ac Dc Adapter Charger Compat... | $16.99  | amazon    |
-| 30/09/2021 12:02:33 | Philips Hue 1748930VN 8ft Cable Connecto... | $19.99  | amazon    |
-| 30/09/2021 12:02:32 | PARMIDA LED 5/6 inch Smart Recessed Ligh... | $20.99  | amazon    |
-| 30/09/2021 12:02:34 | Philips Hue White Ambiance A19 Smart Lig... | $24.99  | walmart   |
-| 30/09/2021 12:02:34 | Philips Hue White and Color Ambiance Sma... | $29.99  | walmart   |
+| timestamp                     | title                                       | price      | website   | rating   |
+|-------------------------------|---------------------------------------------|------------|-----------|----------|
+| 01/10/2022 13:57:59 EDT -0400 | Philips Hue Econic Outdoor White & Color... | N.A        | amazon    | 4.8      |
+| 01/10/2022 13:57:59 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
+| 01/10/2022 13:58:01 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
+| 01/10/2022 13:57:59 EDT -0400 | Outdoor Low voltage Extension Cable for ... | $19.98     | amazon    | 4.7      |
+| 01/10/2022 13:58:01 EDT -0400 | Philips Hue White Ambiance A19 LED 60-Wa... | $21.88     | walmart   | N.A      |
+| 01/10/2022 13:58:01 EDT -0400 | Philips Hue White Ambiance A19 LED 60-Wa... | Now $21.97 | walmart   | N.A      |
+| 01/10/2022 13:58:01 EDT -0400 | Philips Hue White and Color Ambiance Blu... | $39.99     | target    | 3.42     |
+| 01/10/2022 13:58:01 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | Now $49.68 | walmart   | N.A      |
+| 01/10/2022 13:58:01 EDT -0400 | Philips Hue 2pk BR30 Warm-To-Cool LED Sm... | $49.99     | target    | 4.73     |
 ```
 #### 3. Sort Order
 The ```--des``` flag can be set to sort the requested products in a non-increasing order. This flag will be 
@@ -126,14 +132,17 @@ For Windows
 python slash.py --search "philips hue" --sort pr --des
 ```
 ```
-| timestamp           | title                                       | price   | website   |
-|---------------------|---------------------------------------------|---------|-----------|
-| 30/09/2021 12:03:42 | Philips Hue Bluetooth Smart Lightstrip P... |         | amazon    |
-| 30/09/2021 12:03:42 | Philips - Hue Play HDMI Sync Box - Black... |         | amazon    |
-| 30/09/2021 12:03:42 | Lutron Aurora Smart Bulb Dimmer Switch |... |         | amazon    |
-| 30/09/2021 12:03:44 | Philips Hue White and Color Ambiance A19... | $199.99 | walmart   |
-| 30/09/2021 12:03:44 | Philips Hue White and Color Ambiance 2-P... | $105.87 | walmart   |
-| 30/09/2021 12:03:44 | Philips Hue White and Color Ambiance Sma... | $89.99  | walmart   |
+| timestamp                     | title                                       | price   | website   | rating   |
+|-------------------------------|---------------------------------------------|---------|-----------|----------|
+| 01/10/2022 13:59:09 EDT -0400 | 75" Gradient TV Lightstrip Entertainment... | $541.77 | amazon    | 4.3      |
+| 01/10/2022 13:59:09 EDT -0400 | Philips Hue 2-Pack Bluetooth Gradient Am... | $324.99 | amazon    | N.A      |
+| 01/10/2022 13:59:09 EDT -0400 | Philips Hue White and Color Ambiance Ext... | $323.95 | amazon    | N.A      |
+| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White and Color Ambiance A19... | $199.99 | walmart   | N.A      |
+| 01/10/2022 13:59:11 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99 | target    | 4.63     |
+| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White &#38; Color Ambiance D... | $179.99 | target    | 3.7      |
+| 01/10/2022 13:59:11 EDT -0400 | Philips Hue 4-Pack White and Color A19 M... | $159.99 | walmart   | N.A      |
+| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White & Color Ambiance Calla... | $149.99 | target    | 5.0      |
+| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White A19 Smart Light Starte... | $81.86  | walmart   | N.A      |
 ```
 
 #### 4. Result length
@@ -148,18 +157,23 @@ For Windows
 python slash.py --search "philips hue" --num 5
 ```
 ```
-| timestamp           | title                                       | price   | website   |
-|---------------------|---------------------------------------------|---------|-----------|
-| 30/09/2021 12:07:41 | Govee Immersion TV LED Backlights with C... | $82.99  | amazon    |
-| 30/09/2021 12:07:41 | Philips Hue 548610 CFH Smart Light A19, ... | $79.99  | amazon    |
-| 30/09/2021 12:07:41 | Philips Hue Play White & Color Smart Lig... | $149.99 | amazon    |
-| 30/09/2021 12:07:41 | Philips Hue White and Color Iris Corded ... | $99.99  | amazon    |
-| 30/09/2021 12:07:41 | Philips Hue White & Color E12 LED Candle... | $49.97  | amazon    |
-| 30/09/2021 12:07:42 | Philips Hue 3-Pack 60W White Bluetooth S... | $37.88  | walmart   |
-| 30/09/2021 12:07:42 | Philips Hue Smart Stand Alone Bridge, Hu... | $57.92  | walmart   |
-| 30/09/2021 12:07:42 | Philips Hue White and Color Ambiance Sma... | $89.99  | walmart   |
-| 30/09/2021 12:07:42 | Philips Hue White and Color Ambiance Sma... | $29.99  | walmart   |
-| 30/09/2021 12:07:42 | Philips Hue White and Color Ambiance A19... | $199.99 | walmart   |
+| timestamp                     | title                                       | price      | website   | rating   |
+|-------------------------------|---------------------------------------------|------------|-----------|----------|
+| 01/10/2022 13:59:54 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
+| 01/10/2022 13:59:54 EDT -0400 | Philips Hue White & Color Ambiance White... | $119.99    | amazon    | 4.7      |
+| 01/10/2022 13:59:54 EDT -0400 | PHILIPS Hue 2pk A19 LED Starter Kit with... | $69.99     | amazon    | 4.7      |
+| 01/10/2022 13:59:54 EDT -0400 | Philips Hue White Filament Globe G25 LED... | $32.94     | amazon    | 4.7      |
+| 01/10/2022 13:59:54 EDT -0400 | Philips Hue White and Color Ambiance A19... | $99.99     | amazon    | 4.7      |
+| 01/10/2022 13:59:56 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | Now $49.68 | walmart   | N.A      |
+| 01/10/2022 13:59:56 EDT -0400 | Philips Hue 3-Pack 60W White Bluetooth S... | $69.00     | walmart   | N.A      |
+| 01/10/2022 13:59:56 EDT -0400 | Philips Hue LED 60-Watt White A19 Dimmab... | $52.99     | walmart   | N.A      |
+| 01/10/2022 13:59:56 EDT -0400 | Philips Hue White A19 Smart Light Starte... | $81.86     | walmart   | N.A      |
+| 01/10/2022 13:59:56 EDT -0400 | Philips Hue White and Color Ambiance Sma... | Now $69.99 | walmart   | N.A      |
+| 01/10/2022 13:59:57 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
+| 01/10/2022 13:59:57 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99    | target    | 4.63     |
+| 01/10/2022 13:59:57 EDT -0400 | Philips Hue A19 75W Smart LED Bulb          | $54.99     | target    | 4.3      |
+| 01/10/2022 13:59:57 EDT -0400 | Philips Hue 2pk A19 LED Starter Kit with... | $69.99     | target    | 4.35     |
+| 01/10/2022 13:59:57 EDT -0400 | Philips Hue White &#38; Color Ambiance D... | $179.99    | target    | 3.7      |
 ```
 
 :thought_balloon: Use Case
@@ -183,11 +197,11 @@ python slash.py --search "philips hue" --num 5
 
 <table>
   <tr>
-    <td align="center"><a href="http://www.shubhammankar.com/"><img src="https://avatars.githubusercontent.com/u/29366125?v=4" width="75px;" alt=""/><br /><sub><b>Shubham Mankar</b></sub></a></td>
-    <td align="center"><a href="https://github.com/pratikdevnani"><img src="https://avatars.githubusercontent.com/u/43350493?v=4" width="75px;" alt=""/><br /><sub><b>Pratik Devnani</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/moksh98"><img src="https://avatars.githubusercontent.com/u/29693765?v=4" width="75px;" alt=""/><br /><sub><b>Moksh Jain</b></sub></a><br /></td>
-    <td align="center"><a href="https://rahilsarvaiya.tech/"><img src="https://avatars0.githubusercontent.com/u/32304956?v=4" width="75px;" alt=""/><br /><sub><b>Rahil Sarvaiya</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/annie0467"><img src="https://avatars.githubusercontent.com/u/17164255?v=4" width="75px;" alt=""/><br /><sub><b>Anushi Keswani</b></sub></a><br /></td>
+    <td align="center"><a href="https://www.linkedin.com/in/srujanponnur">Srujan Ponnur</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/sumanth-somasundar">Sumanth Somasundar</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/vishnuchalla/">Vishnu Challa</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/svnsairam/">Sairam Sakhamuri</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/kanchan-rawat-793753a2/">Kanchan Rawat</a></td>
   </tr>
 </table>
 

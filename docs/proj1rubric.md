@@ -8,50 +8,50 @@ Sr. No| Notes|Self-assement|Evidence|
 2| but nevertheless, here is a track record that everyone is contributing a lot)|3|https://github.com/secheaper/slash/pulse|
 3| Number of commits|3|https://github.com/secheaper/slash/pulse|
 4| Number of commits: by different people|3|https://github.com/secheaper/slash/pulse|
-5| Issues reports: there are **many**|3|[Issues](https://github.com/secheaper/slash/issues)|
-6|  issues are being  closed|3|[Closed Issues](https://github.com/secheaper/slash/issues?q=is%3Aissue+is%3Aclosed+)|
-7| DOI badge: exists |3|Present in [README](https://github.com/vishnuchalla/slash#readme)|
-8|Docs: doco generated , format not ugly|3 |https://github.com/secheaper/slash/tree/main/docs|
-9|Docs: what: point descriptions of each class/function (in isolation) |3|https://github.com/vishnuchalla/slash#readme|
-10|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3|[Examples](https://github.com/secheaper/slash/blob/main/README.md#card_index_dividers-some-examples)|
-11|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|[Section in README](https://github.com/secheaper/slash#page_facing_up-why)|
-12|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/secheaper/slash/blob/main/assets/demo.gif | 
+5| Issues reports: there are **many**|3|[Issues](https://github.com/vishnuchalla/slash/issues)|
+6|  issues are being  closed|3|[Closed Issues](https://github.com/vishnuchalla/slash/issues?q=is%3Aissue+is%3Aclosed)|
+7| DOI badge: exists |3|Present in [README](https://github.com/secheaper/slash/blob/main/README.md)|
+8|Docs: doco generated , format not ugly|3 |https://github.com/vishnuchalla/slash/tree/main/docs|
+9|Docs: what: point descriptions of each class/function (in isolation) |3|https://github.com/secheaper/slash/blob/main/README.md|
+10|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3|[Examples](https://github.com/vishnuchalla/slash/tree/dev#card_index_dividers-some-examples)|
+11|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|[Section in README](https://github.com/vishnuchalla/slash/tree/dev#page_facing_up-why)|
+12|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/vishnuchalla/slash/blob/main/assets/demo.gif | 
 13| Use of version control tools|3|Git is used thoroughly through the project|
 14| Use of  style checkers |3||
 15| Use of code  formatters. |3||
-16| Use of syntax checkers. | 3 |https://github.com/secheaper/slash/blob/main/.github/workflows/python-app.yml|
-17| Use of code coverage |3|https://github.com/secheaper/slash/blob/main/.github/workflows/workflow.yml|
+16| Use of syntax checkers. | 3 |https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
+17| Use of code coverage |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml|
 18| other automated analysis tools|2||
-19| test cases exist|3|https://github.com/secheaper/slash/blob/main/tests/test_app.py|
-20| test cases are routinely executed|3|https://github.com/secheaper/slash/actions/workflows/python-app.yml|
-21| the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|2|https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md|
+19| test cases exist|3|https://github.com/vishnuchalla/slash/tree/main/tests|
+20| test cases are routinely executed|3|https://github.com/vishnuchalla/slash/actions/workflows/python-app.yml|
+21| the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|2|https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md|
 22| issues are discussed before they are closed|1| There is a discussion channel on our discord server |
 23| Chat channel: exists|3|https://discord.gg/K4khCZGR|
 24| test cases:.a large proportion of the issues related to handling failing cases.| 3 |if a test case fails, open an issue and fix it|
-25| evidence that the whole team is using the same tools: everyone can get to all tools and files | 3 | We can clearly see that entire codebase has been written in Python(https://github.com/secheaper/slash/search?l=python). Everyone has the same access to the repository and also have equal access to comitting directly to the main branch. |
+25| evidence that the whole team is using the same tools: everyone can get to all tools and files | 3 | We can clearly see that entire codebase has been written in Python(https://github.com/vishnuchalla/slash/search?l=python). Everyone has the same access to the repository and also have equal access to comitting directly to the main branch. |
 26| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3 ||
 27| evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)| 3 | https://github.com/secheaper/slash/graphs/contributors |
 28| Evidence that the members of the team are working across multiple places in the code base | 3 | https://github.com/secheaper/slash/graphs/contributors |
 29| short release cycles | 3 |(hard to see in short projects) project members are committing often enough so that everyone can get your work|
-30| Documentation provides clear overview of software and uses | 3 | https://github.com/secheaper/slash#readme |
-31| Website and documentation clearly describe the type of user who should use your software | 3 | https://github.com/secheaper/slash#readme |
+30| Documentation provides clear overview of software and uses | 3 | https://github.com/vishnuchalla/slash#readme |
+31| Website and documentation clearly describe the type of user who should use your software | 3 | https://github.com/vishnuchalla/slash#readme |
 32| Case studies to show how software is used by us | 3 | provided Gif in the README.md |
 33| Project name unique | 3 | Slash was derived from "slashing" prices down or reducing the prices of a product. |
 34| Project name free from trademark violations | 3 | We verified that "slash" has not been trademarked by any python repository or any US company. |
 35| Software available as a package that can be deployed without building it |3 ||
-36| Software available for free | 3 | Our repository is public and can be clone and used by anyone. (https://github.com/secheaper/slash) |
-37| Source code publicly available to download, either as a downloadable bundle or via access to a source code repository | 3 | git clone https://github.com/secheaper/slash.git or Download as a zip file from here https://github.com/secheaper/slash/archive/refs/heads/main.zip |
+36| Software available for free | 3 | Our repository is public and can be clone and used by anyone. (https://github.com/vishnuchalla/slash) |
+37| Source code publicly available to download, either as a downloadable bundle or via access to a source code repository | 3 | git clone https://github.com/vishnuchalla/slash.git or Download as a zip file from here https://github.com/vishnuchalla/slash/archive/refs/heads/main.zip |
 38| Software hosted in an established, third-party repository likeGitHub (https://github.com) | 3 ||
 39| Documentation clearly available within your software | 3 | https://github.com/secheaper/slash#readme |
-40| Documentation includes a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use | 3 | https://github.com/secheaper/slash#readme |
-41| Providing more extensive documentation, that gives a clear, step-by-step instructions on how to deploy and use our software | 3 | https://github.com/secheaper/slash#readme |
-42| Comprehensive guide to all your software’s commands, functions and options| 3 | We have defined one use case of each command or function that can be performed by our code. https://github.com/secheaper/slash#readme |
+40| Documentation includes a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use | 3 | https://github.com/vishnuchalla/slash#readme |
+41| Providing more extensive documentation, that gives a clear, step-by-step instructions on how to deploy and use our software | 3 | https://github.com/vishnuchalla/slash#readme |
+42| Comprehensive guide to all your software’s commands, functions and options| 3 | We have defined one use case of each command or function that can be performed by our code. https://github.com/vishnuchalla/slash#readme |
 43| Troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages| 0 | NA |
 44| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation| 1 |Kept as future scope|
-45| Documentation stored under revision control with source code| 3 | https://github.com/secheaper/slash/blame/main/README.md |
+45| Documentation stored under revision control with source code| 3 | https://github.com/vishnuchalla/slash#readme |
 46| Publishing the release history e.g. release data, version numbers, key features of each release etc. in your documentation | 3 | https://github.com/secheaper/slash/releases/tag/v1.0.0 |
-47| Software describes how a user can get help with using your software | 3 | https://github.com/secheaper/slash#readme |
-48| Our documentation describes what support we provide to users and developers | 3 | https://github.com/secheaper/slash#readme |
+47| Software describes how a user can get help with using your software | 3 | https://github.com/vishnuchalla/slash#readme |
+48| Our documentation describes what support we provide to users and developers | 3 | https://github.com/vishnuchalla/slash#readme |
 49| Project has an e-mail address or forum that is solely for supporting users | 3 | secheaper@gmail.com |
 50| E-mails to our support e-mail address are received by more than one person | 3 | we all have the access credentials to the support email | 
 51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/secheaper/slash/projects/1) |
