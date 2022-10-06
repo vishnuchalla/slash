@@ -15,6 +15,7 @@ the required format.
 from datetime import datetime
 import math
 import pytz
+import re
 
 
 def formatResult(website, titles, prices, links, ratings):
