@@ -16,6 +16,7 @@ from datetime import datetime
 import math
 import pytz
 import re
+import pyshorteners
 
 
 def formatResult(website, titles, prices, links, ratings):
@@ -46,6 +47,7 @@ def formatResult(website, titles, prices, links, ratings):
         if links: 
             link = links[0]['href']
             link = f'www.{website}.com{link}'
+    link = linkShortner(link)
     
     if website == "target":
         rating = ratings
@@ -57,10 +59,10 @@ def formatResult(website, titles, prices, links, ratings):
         'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
         "title": formatTitle(title),
         "price": price if price != '' else 'N.A',
-        # "link":f'www.{website}.com{link}', 
-        # "link": link, 
         "website": website,
-        "rating": rating if rating != '' else 'N.A'
+        "rating": rating if rating != '' else 'N.A',
+        "link":f'www.{website}.com{link}', 
+        "link": link
     }
     return product
 
@@ -115,3 +117,8 @@ def getNumbers(st):
         return ans
     else:
         return st
+
+def linkShortner(long_url):
+    type_tiny = pyshorteners.Shortener()
+    short_url = type_tiny.tinyurl.short(long_url)
+    return short_url

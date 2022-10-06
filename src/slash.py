@@ -23,9 +23,9 @@ def main():
     parser.add_argument('--des', action='store_true', help="Sort in descending (non-increasing) order")
     args = parser.parse_args()
 
-    products1 = scraper.searchAmazon(args.search)
-    products2 = scraper.searchWalmart(args.search)
-    products3 = scraper.searchTarget(args.search)
+    products1 = scraper.searchAmazon(args.search, args.link)
+    products2 = scraper.searchWalmart(args.search, args.link)
+    products3 = scraper.searchTarget(args.search, args.link)
     for sortBy in args.sort:
         products1 = formatter.sortList(products1, sortBy, args.des)[:args.num]
         products2 = formatter.sortList(products2, sortBy, args.des)[:args.num]
@@ -37,7 +37,7 @@ def main():
     print()
     print(tabulate(results, headers="keys", tablefmt="github"))
     print("\nWriting data to items.csv\n")
-    csv_utils.write_data(results)
+    csv_utils.write_data(results, args.link)
     print("Done :)")
     print()
     print()
