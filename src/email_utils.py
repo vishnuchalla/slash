@@ -164,7 +164,6 @@ def write_data(results, receiver_emails):
         return
     fieldnames = ['title', 'website', 'price', 'rating', 'timestamp']
     tempFile = tempfile.NamedTemporaryFile(delete=True)
-    print(receiver_emails)
     try:
         with open(tempFile.name, "w+t") as f:
             writer = csv.DictWriter(f, delimiter ='\t', fieldnames=fieldnames)
