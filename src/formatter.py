@@ -33,7 +33,11 @@ def formatResult(website, titles, prices, links, ratings):
     if website == "target":
         price = prices
     else: 
-        if prices: price = prices[0].get_text().strip()
+        if prices: 
+            price = prices[0].get_text().strip()
+            price = re.search(r"\S+\d[\d,\.]*?\b", price)
+            price = price.group()
+            
 
     if website == "target":
         link = links
