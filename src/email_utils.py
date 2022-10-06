@@ -140,14 +140,31 @@ Team Slash.
 
     return table_head + table_body + table_foot + body_end
 
+def alternateMerge(listToMerge):
+    maxLength = len(listToMerge[0])
+    mergedList = []
+    for each in listToMerge[1:]:
+        maxLength = max(maxLength, len(each))
+    idx = 0
+    while idx < maxLength:
+        for each in listToMerge:
+            if idx < len(each):
+                mergedList.append(each[idx])
+        idx += 1
+    return mergedList
 
-def write_data(results):
+def write_data(results, receiver_emails):
     """
     Write data and publish it.
-    :param: results from the search queries.
+    :param results: results data from the search queries.
+    :param receiver_emails: list of comma separated emails.
     """
+    if(len(results) == 0):
+        print("No results found for the search query. Hence no email on it")
+        return
     fieldnames = ['title', 'website', 'price', 'rating', 'timestamp']
     tempFile = tempfile.NamedTemporaryFile(delete=True)
+    print(receiver_emails)
     try:
         with open(tempFile.name, "w+t") as f:
             writer = csv.DictWriter(f, delimiter ='\t', fieldnames=fieldnames)
@@ -156,10 +173,9 @@ def write_data(results):
         f.close()
         email_text = text_table_to_html(tempFile.name, fieldnames)
         send_html_email(email_from="vishnuchalla47@gmail.com",
-        email_to="coolv47@gmail.com,vchalla2@ncsu.edu", 
-        email_cc="kprawat@ncsu.edu,sponnur@ncsu.edu,sbangal3@ncsu.edu,svsakham@ncsu.edu", 
-        email_subject="Slash execution results", 
-        text_body=email_text, 
+        email_to=receiver_emails, 
+        email_subject="Slash execution results",
+        text_body=email_text,
         attachments=[tempFile.name])
     except Exception as e:
             raise Exception("Error while sending the email. Error:- " + str(e))

@@ -21,24 +21,26 @@ def main():
     parser.add_argument('--sort', type=str, nargs='+', help="Sort according to re (relevance: default), pr (price) or ra (rating) or all", default="re")
     parser.add_argument('--link', action='store_true', help="Show links in the table")
     parser.add_argument('--des', action='store_true', help="Sort in descending (non-increasing) order")
+    parser.add_argument('--email', type=str, help="comma separated list of emails to send report", default="")
     args = parser.parse_args()
 
     products1 = scraper.searchAmazon(args.search)
     products2 = scraper.searchWalmart(args.search)
     products3 = scraper.searchTarget(args.search)
+    finalistList = []
     for sortBy in args.sort:
-        products1 = formatter.sortList(products1, sortBy, args.des)[:args.num]
-        products2 = formatter.sortList(products2, sortBy, args.des)[:args.num]
-        products3 = formatter.sortList(products3, sortBy, args.des)[:args.num]
-        results = products1 + products2 + products3
-        results = formatter.sortList(results, sortBy, args.des)
+        finalistList.append(formatter.sortList(products1, sortBy, args.des)[:args.num])
+        finalistList.append(formatter.sortList(products2, sortBy, args.des)[:args.num])
+        finalistList.append(formatter.sortList(products3, sortBy, args.des)[:args.num])
+        mergedResults = email_utils.alternateMerge(finalistList)
+        results = formatter.sortList(mergedResults, sortBy, args.des)
 
     print()
     print()
     print(tabulate(results, headers="keys", tablefmt="github"))
-    print("\nSending email of the results\n")
-    email_utils.write_data(results)
-    print("Done :)")
+    print("\nTrying to send email of the results\n")
+    email_utils.write_data(results, args.email)
+    print("Execution Completed :)")
     print()
     print()
 
