@@ -67,7 +67,7 @@ Currently the tool supports the following flags and command line arguments. Thes
 |-----------|------|---------|----------------------------------------------------------------------|
 | --search  | str  | None    | The product name to be used as the search query                      |
 | --num     | int  | 3       | Maximum number of products to search                                 |
-| --sort    | str  | re      | Sort results by relevance (re) or by price (pr)                      |
+| --sort    | str  | re      | Sort results by relevance (re) or by price (pr) or by rating (ra) or by all the features (all)                      |
 | --des     | bool | -       | Set boolean flag if results should be sorted in non-increasing order |
 
 :card_index_dividers: Some Examples
