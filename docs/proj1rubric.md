@@ -70,8 +70,8 @@ Sr. No| Notes|Self-assement|Evidence|
 64| Provide publicly available instructions for building the software from the source code | 3| https://github.com/vishnuchalla/slash/blob/main/README.md|
 65| Build, or package, the software using an automated tool | 3||
 66| Provide publicly-available instructions for deploying the software | 2||
-67| Documentation list all third-party dependencies | 3|https://github.com/secheaper/slash/blob/main/requirements.txt|
-68| Documentation lists the version number for all third-party dependencies | 3|https://github.com/secheaper/slash/blob/main/requirements.txt|
+67| Documentation list all third-party dependencies | 3|https://github.com/vishnuchalla/slash/blob/main/requirements.txt|
+68| Documentation lists the version number for all third-party dependencies | 3|https://github.com/vishnuchalla/slash/blob/main/requirements.txt|
 69| Software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional |2| Dependencies in requirements.txt|
 70| Download dependencies using a dependency management tool or package manager | 3| Requirements can be downloaded by pip|
 71| Tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful |3 |https://github.com/secheaper/slash/tree/main/tests|
