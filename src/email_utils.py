@@ -162,6 +162,9 @@ def write_data(results, receiver_emails):
     if(len(results) == 0):
         print("No results found for the search query. Hence no email on it")
         return
+    if(len(receiver_emails) == 0):
+        print("No email to send data. Hence not sending the email")
+        return
     fieldnames = ['title', 'website', 'price', 'rating', 'timestamp']
     tempFile = tempfile.NamedTemporaryFile(delete=True)
     try:
