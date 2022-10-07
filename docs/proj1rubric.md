@@ -86,19 +86,19 @@ Sr. No| Notes|Self-assement|Evidence|
 80| Listing the important partners and collaborators in our documentation | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 81| Listing the project's publications on our website or link to a resource where these are available | 3||
 82| Listing third-party publications that refer to the software on our website or link to a resource where these are available | 3||
-83| Users can subscribe to notifications to changes to your source code repository | 2 | Each contributor gets an email when any issues they are assigned gets an update. |
+83| Users can subscribe to notifications to changes to your source code repository | 3 | Each contributor gets an email when any issues they are assigned gets an update. |
 84| Since the software is developed as an open source project (and, not just a project developing open source software), do we have a governance model | 1| NA|
-85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | We received a Pull Request from someone outside of our project fixing one of our issues. He was simply browsing Github and came across our repo when he searched for the "good-first-issue" keyword. | 
+85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | Yes | 
 86| Do you have a contributions policy | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
 87| Is your contributions' policy publicly available? | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
 88| Do contributors keep the copyright/IP of their contributions |3||
-89| Website and documentation clearly states the copyright owners of your software and documentation | 2||
+89| Website and documentation clearly states the copyright owners of your software and documentation | 3||
 90| Do each of your source code files include a copyright statement | 3 | Can be seen in all the python codes |
 91| The website and documentation clearly state the licence of your software | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
 92| Software released under an open source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
 93| Software released under an OSI-approved open-source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
 94| Source code files include a licence header | 3 | MIT License(https://github.com/vishnuchalla/slash/blob/main/LICENSE) |
-95| Recommended citation for your software | 2||
-96| Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 3|https://github.com/secheaper/slash/projects/1|
+95| Recommended citation for your software | 3||
+96| Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 3|https://github.com/users/vishnuchalla/projects/1|
 97| Documentation describe how the project is funded, and the period over which funding is guaranteed? |1| NA|
 98| Do you make timely announcements of the deprecation of components, APIs, etc. |1| NA|
