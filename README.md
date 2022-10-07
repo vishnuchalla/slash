@@ -257,6 +257,12 @@ Done :)
 - Slash in its current form is for people who have some understanding of python and are comfortable in using the command line interface to interact with systems.
 - Future updates aim to encompass a wide variety of users irrespective of their computer knowledge and background.
 
+ Document Generated
+---
+To have a better understanding of the code, please click on the [link](https://sumanthbsundar.github.io/slash_doc/) provided below.
+
+[Github Pages](https://sumanthbsundar.github.io/slash_doc/)
+
 
 :sparkles: Contributors
 ---
