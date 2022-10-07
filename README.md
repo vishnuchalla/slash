@@ -123,7 +123,7 @@ python slash.py --search "philips hue" --sort pr
 ```
 #### 3. Sort Order
 The ```--des``` flag can be set to sort the requested products in a non-increasing order. This flag will be 
-actually used when coupled with ```--sort```. Example:
+actually used when coupled with ```--sort``` and the default value taken is true. Example:
 ```
 For Mac
 python3 slash.py --search "philips hue" --sort pr --des
