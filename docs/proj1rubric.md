@@ -64,10 +64,10 @@ Sr. No| Notes|Self-assement|Evidence|
 58| Software adhere to appropriate accessibility conventions or standards |3||
 59| Documentation adheres to appropriate accessibility conventions or standards | 2 ||
 60| Each source code releases a snapshot of the repository |2 ||
-61| Releases are tagged in the repository | 3 | https://github.com/secheaper/slash/releases/tag/v1.0.0 |
+61| Releases are tagged in the repository | 3 | https://github.com/vishnuchalla/slash/tree/v1.0.1 |
 62| There is a branch of the repository that is always stable | 3 | the main branch is always stable |
 63| Back-up your repository | 3| dev is created for backup|
-64| Provide publicly available instructions for building the software from the source code | 3| https://github.com/secheaper/slash/blob/main/README.md|
+64| Provide publicly available instructions for building the software from the source code | 3| https://github.com/vishnuchalla/slash/blob/main/README.md|
 65| Build, or package, the software using an automated tool | 3||
 66| Provide publicly-available instructions for deploying the software | 2||
 67| Documentation list all third-party dependencies | 3|https://github.com/secheaper/slash/blob/main/requirements.txt|
