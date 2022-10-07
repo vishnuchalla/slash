@@ -48,9 +48,12 @@ def main():
     products3 = scraper.searchTarget(args.search, args.link)
     finalistList = []
     for sortBy in args.sort:
-        finalistList.append(formatter.sortList(products1, sortBy, args.des)[:args.num])
-        finalistList.append(formatter.sortList(products2, sortBy, args.des)[:args.num])
-        finalistList.append(formatter.sortList(products3, sortBy, args.des)[:args.num])
+        finalistList.append(
+            formatter.sortList(products1, sortBy, args.des)[:args.num])
+        finalistList.append(
+            formatter.sortList(products2, sortBy, args.des)[:args.num])
+        finalistList.append(
+            formatter.sortList(products3, sortBy, args.des)[:args.num])
         mergedResults = email_utils.alternateMerge(finalistList)
         results = formatter.sortList(mergedResults, sortBy, args.des)
 
