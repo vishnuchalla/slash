@@ -74,10 +74,10 @@ Sr. No| Notes|Self-assement|Evidence|
 68| Documentation lists the version number for all third-party dependencies | 3|https://github.com/vishnuchalla/slash/blob/main/requirements.txt|
 69| Software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional |2| Dependencies in requirements.txt|
 70| Download dependencies using a dependency management tool or package manager | 3| Requirements can be downloaded by pip|
-71| Tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful |3 |https://github.com/secheaper/slash/tree/main/tests|
-72| Automated test suite for your software | 3 | https://github.com/secheaper/slash/tree/main/tests |
+71| Tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful |3 |https://github.com/vishnuchalla/slash/tree/main/tests|
+72| Automated test suite for your software | 3 | https://github.com/vishnuchalla/slash/tree/main/tests |
 73| Framework to periodically (e.g. nightly) run your tests on the latest version of the source code |0|NA (will be a part of future roadmap)|
-74| Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
+74| Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 75| Test results publicly visible | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
 76| Manually-run tests documented |2||
 77| Project has resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software |1 |NA|
