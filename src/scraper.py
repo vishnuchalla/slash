@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 def httpsGet(URL):
     """
     The httpsGet funciton makes HTTP called to the requested URL with custom headers
+    return: scraped html content from the URL
     """
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36", "Accept-Encoding":"gzip, deflate", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
     page = requests.get(URL, headers=headers)
@@ -28,6 +29,7 @@ def httpsGet(URL):
 def httpsGetTarget(URL,query):
     """
     The httpsGetTarget function makes HTTP called to the requested URL with custom headers and params specific to Target website
+    return: returns json from the target URL
     """
     headers = {
     'authority': 'redsky.target.com',
@@ -69,7 +71,8 @@ def httpsGetTarget(URL,query):
 def searchAmazon(query):
     """
     The searchAmazon function scrapes amazon.com
-    :param query: search keyword to perform the query.
+    :param query: search keyword to perform the query
+    return: returns the products list from amazon
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.amazon.com/s?k={query}'
@@ -87,7 +90,8 @@ def searchAmazon(query):
 def searchWalmart(query):
     """
     The searchWalmart function scrapes walmart.com
-    :param query: search keyword to perform the query.
+    :param query: search keyword to perform the query
+    return: returns the product list from walmart
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.walmart.com/search?q={query}'
@@ -110,7 +114,8 @@ def searchWalmart(query):
 def searchTarget(query):
     """
     The searchTarget function scrapes hidden API of target.com
-    :param query: search keyword to perform the query.
+    :param query: search keyword to perform the query
+    return: returns the product list from target
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.target.com/s?searchTerm={query}'
