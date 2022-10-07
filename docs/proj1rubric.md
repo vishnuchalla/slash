@@ -78,19 +78,19 @@ Sr. No| Notes|Self-assement|Evidence|
 72| Automated test suite for your software | 3 | https://github.com/vishnuchalla/slash/tree/main/tests |
 73| Framework to periodically (e.g. nightly) run your tests on the latest version of the source code |0|NA (will be a part of future roadmap)|
 74| Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
-75| Test results publicly visible | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
+75| Test results publicly visible | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 76| Manually-run tests documented |2||
 77| Project has resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software |1 |NA|
-78| Documentation states how many projects and users are associated with your project | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
+78| Documentation states how many projects and users are associated with your project | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 79| Provide success stories on your website |2 |Future scope|
-80| Listing the important partners and collaborators in our documentation | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
+80| Listing the important partners and collaborators in our documentation | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 81| Listing the project's publications on our website or link to a resource where these are available | 3||
 82| Listing third-party publications that refer to the software on our website or link to a resource where these are available | 3||
 83| Users can subscribe to notifications to changes to your source code repository | 2 | Each contributor gets an email when any issues they are assigned gets an update. |
 84| Since the software is developed as an open source project (and, not just a project developing open source software), do we have a governance model | 1| NA|
-85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | We received a Pull Request from someone outside of our project fixing one of our issues (https://github.com/secheaper/slash/pull/15). He was simply browsing Github and came across our repo when he searched for the "good-first-issue" keyword. | 
-86| Do you have a contributions policy | 3 | https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
-87| Is your contributions' policy publicly available? | 3 | https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
+85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | We received a Pull Request from someone outside of our project fixing one of our issues. He was simply browsing Github and came across our repo when he searched for the "good-first-issue" keyword. | 
+86| Do you have a contributions policy | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
+87| Is your contributions' policy publicly available? | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
 88| Do contributors keep the copyright/IP of their contributions |3|https://github.com/secheaper/slash/commit/4f8418f1d12ddebf260c259b1047873475536457|
 89| Website and documentation clearly states the copyright owners of your software and documentation | 2||
 90| Do each of your source code files include a copyright statement | 3 | Can be seen in all the python codes |
