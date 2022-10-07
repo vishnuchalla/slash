@@ -17,8 +17,8 @@ Sr. No| Notes|Self-assement|Evidence|
 11|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|[Section in README](https://github.com/vishnuchalla/slash/tree/dev#page_facing_up-why)|
 12|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/vishnuchalla/slash/blob/main/assets/demo.gif | 
 13| Use of version control tools|3|Git is used thoroughly through the project|
-14| Use of  style checkers |3||
-15| Use of code  formatters. |3||
+14| Use of  style checkers |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
+15| Use of code  formatters. |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
 16| Use of syntax checkers. | 3 |https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
 17| Use of code coverage |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml|
 18| other automated analysis tools|2||

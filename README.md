@@ -1,11 +1,13 @@
 <p align="center"><img width="500" src="./assets/slash.png"></p>
 
+**Shopping Made Easy**
+
 ![GitHub](https://img.shields.io/github/license/vishnuchalla/slash)
 ![github workflow](https://github.com/secheaper/cheaper/actions/workflows/python-app.yml/badge.svg) 
 [![DOI](https://zenodo.org/badge/407550383.svg)](https://zenodo.org/badge/latestdoi/407550383)
 ![Github](https://img.shields.io/badge/language-python-red.svg)
-![GitHub issues](https://img.shields.io/github/issues-raw/secheaper/slash)
-![Github closes issues(https://img.shields.io/github/issues-closed-raw/vishnuchalla/slash)] (https://github.com/vishnuchalla/slash/issues?q=is%3Aissue+is%3Aclosed)
+![GitHub issues](https://img.shields.io/github/issues-raw/vishnuchalla/slash)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/vishnuchalla/slash)
 ![Github pull requests](https://img.shields.io/github/issues-pr/vishnuchalla/slash)
 ![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vishnuchalla/slash)
 [![codecov](https://codecov.io/gh/secheaper/slash/branch/main/graph/badge.svg?token=I2J7ICDDI9)](https://codecov.io/gh/secheaper/slash)

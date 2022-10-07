@@ -8,8 +8,13 @@ from email.utils import formatdate
 import csv
 
 
-def send_html_email(email_from=None, email_to=None, email_cc=None, email_bcc=None,
-                    email_subject=None, text_body=None, attachments=None):
+def send_html_email(email_from=None,
+                    email_to=None,
+                    email_cc=None,
+                    email_bcc=None,
+                    email_subject=None,
+                    text_body=None,
+                    attachments=None):
     """
         function will send mail in html format
 
@@ -36,7 +41,9 @@ def send_html_email(email_from=None, email_to=None, email_cc=None, email_bcc=Non
             with open(f, "rb") as fil:
                 part = MIMEApplication(fil.read(), Name=basename(f))
             # After the file is closed
-            part['Content-Disposition'] = 'attachment; filename="%s"' % basename(f)
+            part[
+                'Content-Disposition'] = 'attachment; filename="%s"' % basename(
+                    f)
             msg.attach(part)
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -63,6 +70,7 @@ def send_html_email(email_from=None, email_to=None, email_cc=None, email_bcc=Non
         email_combiner.append(email_bcc)
     server.sendmail(email_from, email_combiner[0], msg.as_string())
     server.close()
+
 
 def text_table_to_html(file, header):
     """
@@ -118,9 +126,9 @@ Hi There,
     csv_file = open(file, 'r')
     reader = csv.reader(csv_file, delimiter='\t')
     for idx, row in enumerate(reader):
-        if(idx == 0):
+        if idx == 0:
             continue
-        if(idx == 15):
+        if idx == 15:
             break
         table_body += '\n\n' + "<tr>"
 
@@ -140,6 +148,7 @@ Team Slash.
 
     return table_head + table_body + table_foot + body_end
 
+
 def alternateMerge(listToMerge):
     """
     Alternate merging the list of products.
@@ -157,33 +166,34 @@ def alternateMerge(listToMerge):
         idx += 1
     return mergedList
 
+
 def write_data(results, receiver_emails):
     """
     Write data and publish it.
     :param results: results data from the search queries.
     :param receiver_emails: list of comma separated emails.
     """
-    if(len(results) == 0):
+    if len(results) == 0:
         print("No results found for the search query. Hence no email on it")
         return
-    if(len(receiver_emails) == 0):
+    if len(receiver_emails) == 0:
         print("No email to send data. Hence not sending the email")
         return
     fieldnames = ['title', 'website', 'price', 'rating', 'timestamp']
     tempFile = tempfile.NamedTemporaryFile(delete=True)
     try:
         with open(tempFile.name, "w+t") as f:
-            writer = csv.DictWriter(f, delimiter ='\t', fieldnames=fieldnames)
+            writer = csv.DictWriter(f, delimiter='\t', fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(results)
         f.close()
         email_text = text_table_to_html(tempFile.name, fieldnames)
         send_html_email(email_from="vishnuchalla47@gmail.com",
-        email_to=receiver_emails, 
-        email_subject="Slash execution results",
-        text_body=email_text,
-        attachments=[tempFile.name])
+                        email_to=receiver_emails,
+                        email_subject="Slash execution results",
+                        text_body=email_text,
+                        attachments=[tempFile.name])
     except Exception as e:
-            raise Exception("Error while sending the email. Error:- " + str(e))
+        raise Exception("Error while sending the email. Error:- " + str(e))
     finally:
         tempFile.close()
