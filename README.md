@@ -180,7 +180,38 @@ python slash.py --search "philips hue" --num 5
 | 01/10/2022 13:59:57 EDT -0400 | Philips Hue White &#38; Color Ambiance D... | $179.99    | target    | 3.7      |
 ```
 
-#### 5. Email Notification
+#### 5. Link
+There is an option to display links int the output. Example:
+```
+For Mac
+python3 slash.py --search "philips hue" --link
+
+For Windows
+python slash.py --search "philips hue" --link
+```
+```
+| timestamp                     | title                                       | price   | website   |   rating | link                         |
+|-------------------------------|---------------------------------------------|---------|-----------|----------|------------------------------|
+| 07/10/2022 16:57:17 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2hf4nm8l |
+| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:57:17 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2hf4nm8l |
+| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:57:18 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2qjv6k8w |
+| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Solid Crew Soc... | $7.79   | target    |     4.71 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:57:18 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2qjv6k8w |
+| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Solid Crew Soc... | $7.79   | target    |     4.71 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:57:18 EDT -0400 | No Show Socks Women Low Socks Non Slip F... | $15.89  | amazon    |     4.5  | https://tinyurl.com/2khadfy2 |
+| 07/10/2022 16:57:35 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
+| 07/10/2022 16:57:18 EDT -0400 | No Show Socks Women Low Socks Non Slip F... | $15.89  | amazon    |     4.5  | https://tinyurl.com/2khadfy2 |
+| 07/10/2022 16:57:35 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
+
+Trying to send email notification to the customers if there are any...
+
+No email to send data. Hence not sending the email
+Done :)
+```
+
+#### 6. Email Notification
 There is an option to send emails to customers using a parameter that accepts a comma separated list of emails. Example:
 ```
 For Mac
