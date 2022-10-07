@@ -151,6 +151,10 @@ def getNumbers(st):
 
 
 def linkShortener(long_url):
+    """
+
+    The linkShortener function shortens the url of the item.
+    """
     if not bool(long_url): return "https://www.ncsu.edu/"
     type_tiny = pyshorteners.Shortener()
     short_url = type_tiny.tinyurl.short(long_url)
