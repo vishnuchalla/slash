@@ -42,7 +42,7 @@ Sr. No| Notes|Self-assement|Evidence|
 36| Software available for free | 3 | Our repository is public and can be clone and used by anyone. (https://github.com/vishnuchalla/slash) |
 37| Source code publicly available to download, either as a downloadable bundle or via access to a source code repository | 3 | git clone https://github.com/vishnuchalla/slash.git or Download as a zip file from here https://github.com/vishnuchalla/slash/archive/refs/heads/main.zip |
 38| Software hosted in an established, third-party repository likeGitHub (https://github.com) | 3 ||
-39| Documentation clearly available within your software | 3 | https://github.com/secheaper/slash#readme |
+39| Documentation clearly available within your software | 3 | https://github.com/vishnuchalla/slash#readme |
 40| Documentation includes a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use | 3 | https://github.com/vishnuchalla/slash#readme |
 41| Providing more extensive documentation, that gives a clear, step-by-step instructions on how to deploy and use our software | 3 | https://github.com/vishnuchalla/slash#readme |
 42| Comprehensive guide to all your software’s commands, functions and options| 3 | We have defined one use case of each command or function that can be performed by our code. https://github.com/vishnuchalla/slash#readme |
