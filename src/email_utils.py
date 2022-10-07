@@ -141,6 +141,10 @@ Team Slash.
     return table_head + table_body + table_foot + body_end
 
 def alternateMerge(listToMerge):
+    """
+    Alternate merging the list of products.
+    :param listToMerge: list of lists for different websites.
+    """
     maxLength = len(listToMerge[0])
     mergedList = []
     for each in listToMerge[1:]:
