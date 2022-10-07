@@ -37,4 +37,4 @@ def test_formatResults():
 
     assert product["title"] == ans["title"] and product["price"] == ans["price"] and \
            product["website"] == ans["website"] and product["rating"] == ans["rating"] \
-           and product["link"] = ans["link"]
+           and product["link"] == ans["link"]
