@@ -69,6 +69,7 @@ def httpsGetTarget(URL,query):
 def searchAmazon(query):
     """
     The searchAmazon function scrapes amazon.com
+    :param query: search keyword to perform the query.
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.amazon.com/s?k={query}'
@@ -86,6 +87,7 @@ def searchAmazon(query):
 def searchWalmart(query):
     """
     The searchWalmart function scrapes walmart.com
+    :param query: search keyword to perform the query.
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.walmart.com/search?q={query}'
@@ -108,6 +110,7 @@ def searchWalmart(query):
 def searchTarget(query):
     """
     The searchTarget function scrapes hidden API of target.com
+    :param query: search keyword to perform the query.
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.target.com/s?searchTerm={query}'
