@@ -153,6 +153,7 @@ def alternateMerge(listToMerge):
     """
     Alternate merging the list of products.
     :param listToMerge: list of lists for different websites.
+    return: merged list
     """
     maxLength = len(listToMerge[0])
     mergedList = []
@@ -172,6 +173,7 @@ def write_data(results, receiver_emails):
     Write data and publish it.
     :param results: results data from the search queries.
     :param receiver_emails: list of comma separated emails.
+    return: None
     """
     if len(results) == 0:
         print("No results found for the search query. Hence no email on it")
