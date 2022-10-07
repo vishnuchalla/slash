@@ -1,13 +1,15 @@
 <p align="center"><img width="500" src="./assets/slash.png"></p>
 
-![GitHub](https://img.shields.io/github/license/secheaper/slash)
+**Shopping Made Easy**
+
+![GitHub](https://img.shields.io/github/license/vishnuchalla/slash)
 ![github workflow](https://github.com/secheaper/cheaper/actions/workflows/python-app.yml/badge.svg) 
 [![DOI](https://zenodo.org/badge/407550383.svg)](https://zenodo.org/badge/latestdoi/407550383)
 ![Github](https://img.shields.io/badge/language-python-red.svg)
-![GitHub issues](https://img.shields.io/github/issues-raw/secheaper/slash)
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/secheaper/slash)
-![Github pull requests](https://img.shields.io/github/issues-pr/secheaper/slash)
-![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/secheaper/slash)
+![GitHub issues](https://img.shields.io/github/issues-raw/vishnuchalla/slash)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/vishnuchalla/slash)
+![Github pull requests](https://img.shields.io/github/issues-pr/vishnuchalla/slash)
+![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vishnuchalla/slash)
 [![codecov](https://codecov.io/gh/secheaper/slash/branch/main/graph/badge.svg?token=I2J7ICDDI9)](https://codecov.io/gh/secheaper/slash)
 
 Slash is a command line tool that scrapes the most popular e-commerce websites to get the best deals on the searched items across these websites. 
@@ -42,7 +44,7 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 ---
 1. Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then ```cd``` into the local repository.
 ```
-git clone https://github.com/secheaper/slash.git
+git clone https://github.com/vishnuchalla/slash
 cd slash
 ```
 2. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of those.
@@ -68,7 +70,7 @@ Currently the tool supports the following flags and command line arguments. Thes
 | --search  | str  | None    | The product name to be used as the search query                      |
 | --num     | int  | 3       | Maximum number of products to search                                 |
 | --sort    | str  | re      | Sort results by relevance (re), by price (pr), by rating (ra) or by all the features using "all" this sorts in the order of price and ratings in the respective order|
-| --des     | bool | -       | Set boolean flag if results should be sorted in non-increasing order |
+| --des     | bool | True      | Set boolean flag if results should be sorted in non-increasing order, the default value is true |
 
 :card_index_dividers: Some Examples
 ---
@@ -123,7 +125,7 @@ python slash.py --search "philips hue" --sort pr
 ```
 #### 3. Sort Order
 The ```--des``` flag can be set to sort the requested products in a non-increasing order. This flag will be 
-actually used when coupled with ```--sort```. Example:
+actually used when coupled with ```--sort``` and the default value taken is true. Example:
 ```
 For Mac
 python3 slash.py --search "philips hue" --sort pr --des

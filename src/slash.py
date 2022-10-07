@@ -15,6 +15,9 @@ from tabulate import tabulate
 
 
 def main():
+    """
+    Argument parser to capture command line and trigger the workflow
+    """
     parser = argparse.ArgumentParser(description="Slash")
     parser.add_argument('--search', type=str, help='Product search query')
     parser.add_argument('--num', type=int, help="Maximum number of records", default=3)
@@ -42,5 +45,9 @@ def main():
     print()
     print()
 
+
 if __name__ == '__main__':
+    """
+    Execution starts here.
+    """
     main()

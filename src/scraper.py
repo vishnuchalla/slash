@@ -18,16 +18,28 @@ from bs4 import BeautifulSoup
 def httpsGet(URL):
     """
     The httpsGet funciton makes HTTP called to the requested URL with custom headers
+    return: scraped html content from the URL
     """
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36", "Accept-Encoding":"gzip, deflate", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
+    headers = {
+        "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept":
+        "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "DNT": "1",
+        "Connection": "close",
+        "Upgrade-Insecure-Requests": "1"
+    }
     page = requests.get(URL, headers=headers)
     soup1 = BeautifulSoup(page.content, "html.parser")
-    return BeautifulSoup(soup1.prettify(), "html.parser") 
 
-    
-def httpsGetTarget(URL,query):
+    return BeautifulSoup(soup1.prettify(), "html.parser")
+
+
+def httpsGetTarget(URL, query):
     """
     The httpsGetTarget function makes HTTP called to the requested URL with custom headers and params specific to Target website
+    return: returns json from the target URL
     """
     headers = {
     'authority': 'redsky.target.com',
@@ -45,22 +57,23 @@ def httpsGetTarget(URL,query):
     }
 
     params = {
-    'key': 'ff457966e64d5e877fdbad070f276d18ecec4a01',
-    'channel': 'WEB',
-    'count': '24',
-    'default_purchasability_filter': 'true',
-    'include_sponsored': 'true',
-    'keyword': query,
-    'offset': '0',
-    'page': f'/s/{query}',
-    'platform': 'desktop',
-    'pricing_store_id': '961',
-    'scheduled_delivery_store_id': '961',
-    'store_ids': '961,2721,1932,2785,3255',
-    'useragent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
-    'visitor_id': '018366FA85BE0201AE0C2E6660BAB7D2',
-    'zip': '27606',
-    }   
+        'key': 'ff457966e64d5e877fdbad070f276d18ecec4a01',
+        'channel': 'WEB',
+        'count': '24',
+        'default_purchasability_filter': 'true',
+        'include_sponsored': 'true',
+        'keyword': query,
+        'offset': '0',
+        'page': f'/s/{query}',
+        'platform': 'desktop',
+        'pricing_store_id': '961',
+        'scheduled_delivery_store_id': '961',
+        'store_ids': '961,2721,1932,2785,3255',
+        'useragent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+        'visitor_id': '018366FA85BE0201AE0C2E6660BAB7D2',
+        'zip': '27606',
+    }
 
     response = requests.get('https://redsky.target.com/redsky_aggregations/v1/web/plp_search_v2', params=params, headers=headers)
     results_json = response.json()
@@ -69,11 +82,13 @@ def httpsGetTarget(URL,query):
 def searchAmazon(query, linkFlag):
     """
     The searchAmazon function scrapes amazon.com
+    :param query: search keyword to perform the query
+    return: returns the products list from amazon
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.amazon.com/s?k={query}'
     page = httpsGet(URL)
-    results = page.findAll("div", {"data-component-type":"s-search-result"})
+    results = page.findAll("div", {"data-component-type": "s-search-result"})
     products = []
     for res in results:
         titles, prices, links = res.select("h2 a span"), res.select("span.a-price span"), res.select("h2 a.a-link-normal")
@@ -88,6 +103,8 @@ def searchAmazon(query, linkFlag):
 def searchWalmart(query, linkFlag):
     """
     The searchWalmart function scrapes walmart.com
+    :param query: search keyword to perform the query
+    return: returns the product list from walmart
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.walmart.com/search?q={query}'
@@ -112,10 +129,12 @@ def searchWalmart(query, linkFlag):
 def searchTarget(query, linkFlag):
     """
     The searchTarget function scrapes hidden API of target.com
+    :param query: search keyword to perform the query
+    return: returns the product list from target
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.target.com/s?searchTerm={query}'
-    page = httpsGetTarget(URL,query)
+    page = httpsGetTarget(URL, query)
     results = page['data']['search']['products']
     products = []
     for i in range(len(results)):
