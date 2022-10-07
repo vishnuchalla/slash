@@ -180,6 +180,36 @@ python slash.py --search "philips hue" --num 5
 | 01/10/2022 13:59:57 EDT -0400 | Philips Hue White &#38; Color Ambiance D... | $179.99    | target    | 3.7      |
 ```
 
+#### 5. Email Notification
+There is an option to send emails to customers using a parameter that accepts a comma separated list of emails. Example:
+```
+For Mac
+python3 slash.py --search "philips hue" --link --email "vchalla2@ncsu.edu,sponnur@ncsu.edu"
+
+For Windows
+python slash.py --search "philips hue" --link --email "vchalla2@ncsu.edu,sponnur@ncsu.edu"
+```
+```
+| timestamp                     | title                                       | price   | website   |   rating | link                         |
+|-------------------------------|---------------------------------------------|---------|-----------|----------|------------------------------|
+| 07/10/2022 16:47:58 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2outdp6f |
+| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:47:58 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2outdp6f |
+| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:47:58 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2dsl5uyc |
+| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $8.99   | target    |     4.65 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:47:58 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2dsl5uyc |
+| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $8.99   | target    |     4.65 | https://tinyurl.com/2o5fx6az |
+| 07/10/2022 16:47:59 EDT -0400 | CelerSport Ankle Athletic Running Socks ... | $15.95  | amazon    |     4.7  | https://tinyurl.com/2en2jbsd |
+| 07/10/2022 16:48:15 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
+| 07/10/2022 16:47:59 EDT -0400 | CelerSport Ankle Athletic Running Socks ... | $15.95  | amazon    |     4.7  | https://tinyurl.com/2en2jbsd |
+| 07/10/2022 16:48:15 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
+
+Trying to send email notification to the customers if there are any...
+
+Done :)
+```
+
 :thought_balloon: Use Case
 ---
 * ***Students***: Students coming to university are generally on a budget and time constraint and generally spend hours wasting time to search for products on Websites. Slash is the perfect tool for these students that slashes all the unnecessary details on a website and helps them get prices for a product across multiple websites.Make the most of this tool in the upcoming Black Friday Sale.
