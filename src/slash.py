@@ -10,7 +10,7 @@ this file. If not, please write to: secheaper@gmail.com
 import argparse
 import scraper
 import formatter
-import email_utils
+import csv_utils
 from tabulate import tabulate
 
 
@@ -37,32 +37,24 @@ def main():
     parser.add_argument('--des',
                         action='store_true',
                         help="Sort in descending (non-increasing) order")
-    parser.add_argument('--email',
-                        type=str,
-                        help="comma separated list of emails to send report",
-                        default="")
     args = parser.parse_args()
 
-    products1 = scraper.searchAmazon(args.search)
-    products2 = scraper.searchWalmart(args.search)
-    products3 = scraper.searchTarget(args.search)
-    finalistList = []
-    for sortBy in args.sort:  # collate all the product results from individual website
-        finalistList.append(
-            formatter.sortList(products1, sortBy, args.des)[:args.num])
-        finalistList.append(
-            formatter.sortList(products2, sortBy, args.des)[:args.num])
-        finalistList.append(
-            formatter.sortList(products3, sortBy, args.des)[:args.num])
-        mergedResults = email_utils.alternateMerge(finalistList)
-        results = formatter.sortList(mergedResults, sortBy, args.des)
+    products1 = scraper.searchAmazon(args.search, args.link)
+    products2 = scraper.searchWalmart(args.search, args.link)
+    products3 = scraper.searchTarget(args.search, args.link)
+    for sortBy in args.sort:
+        products1 = formatter.sortList(products1, sortBy, args.des)[:args.num]
+        products2 = formatter.sortList(products2, sortBy, args.des)[:args.num]
+        products3 = formatter.sortList(products3, sortBy, args.des)[:args.num]
+        results = products1 + products2 + products3
+        results = formatter.sortList(results, sortBy, args.des)
 
     print()
     print()
     print(tabulate(results, headers="keys", tablefmt="github"))
-    print("\nTrying to send email of the results\n")
-    email_utils.write_data(results, args.email)
-    print("Execution Completed :)")
+    print("\nWriting data to items.csv\n")
+    csv_utils.write_data(results, args.link)
+    print("Done :)")
     print()
     print()
 

@@ -1,6 +1,3 @@
-import requests
-import formatter
-from bs4 import BeautifulSoup
 """
 Copyright (C) 2021 SE Slash - All Rights Reserved
 You may use, distribute and modify this code under the
@@ -12,6 +9,10 @@ this file. If not, please write to: secheaper@gmail.com
 """
 The scraper module holds functions that actually scrape the e-commerce websites
 """
+
+import requests
+import formatter
+from bs4 import BeautifulSoup
 
 
 def httpsGet(URL):
@@ -94,7 +95,7 @@ def httpsGetTarget(URL, query):
     return results_json
 
 
-def searchAmazon(query):
+def searchAmazon(query, linkFlag):
     """
     The searchAmazon function scrapes amazon.com
     :param query: search keyword to perform the query
@@ -111,12 +112,14 @@ def searchAmazon(query):
         ratings = res.select("span.a-icon-alt")
         product = formatter.formatResult("amazon", titles, prices, links,
                                          ratings)
+        if not linkFlag:
+            del product["link"]
         if prices is not None:
             products.append(product)
     return products
 
 
-def searchWalmart(query):
+def searchWalmart(query, linkFlag):
     """
     The searchWalmart function scrapes walmart.com
     :param query: search keyword to perform the query
@@ -137,12 +140,14 @@ def searchWalmart(query):
             ratings = None
         product = formatter.formatResult("walmart", titles, prices, links,
                                          ratings)
+        if not linkFlag:
+            del product["link"]
         if prices is not None:
             products.append(product)
     return products
 
 
-def searchTarget(query):
+def searchTarget(query, linkFlag):
     """
     The searchTarget function scrapes hidden API of target.com
     :param query: search keyword to perform the query
@@ -157,7 +162,7 @@ def searchTarget(query):
         titles = results[i]['item']['product_description']['title'].replace(
             '&#8482;', '')
         prices = results[i]['price']['formatted_current_price']
-        if 'parent' in results[i].keys():
+        if ('parent' in results[i].keys()):
             ratings = results[i]['parent']['ratings_and_reviews'][
                 'statistics']['rating']['average']
         else:
@@ -170,6 +175,8 @@ def searchTarget(query):
             links = ''
         product = formatter.formatResult("target", titles, prices, links,
                                          ratings)
+        if not linkFlag:
+            del product["link"]
         if prices is not None:
             products.append(product)
     return products
