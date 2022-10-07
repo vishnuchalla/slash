@@ -158,19 +158,19 @@ def searchTarget(query, linkFlag):
     page = httpsGetTarget(URL, query)
     results = page['data']['search']['products']
     products = []
-    for i in range(len(results)):
-        titles = results[i]['item']['product_description']['title'].replace(
+    for idx in range(len(results)):
+        titles = results[idx]['item']['product_description']['title'].replace(
             '&#8482;', '')
-        prices = results[i]['price']['formatted_current_price']
-        if ('parent' in results[i].keys()):
-            ratings = results[i]['parent']['ratings_and_reviews'][
+        prices = results[idx]['price']['formatted_current_price']
+        if ('parent' in results[idx].keys()):
+            ratings = results[idx]['parent']['ratings_and_reviews'][
                 'statistics']['rating']['average']
         else:
-            ratings = results[i]['ratings_and_reviews']['statistics'][
+            ratings = results[idx]['ratings_and_reviews']['statistics'][
                 'rating']['average']
-        if 'primary_brand' in results[i]['item']:
+        if 'primary_brand' in results[idx]['item']:
             links = URL + str(
-                results[i]['item']['primary_brand']['canonical_url'])
+                results[idx]['item']['primary_brand']['canonical_url'])
         else:
             links = ''
         product = formatter.formatResult("target", titles, prices, links,
