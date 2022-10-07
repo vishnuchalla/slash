@@ -31,7 +31,6 @@ def httpsGet(URL):
     page = requests.get(URL, headers=headers)
     soup1 = BeautifulSoup(page.content, "html.parser")
 
-
     return BeautifulSoup(soup1.prettify(), "html.parser")
 
 
