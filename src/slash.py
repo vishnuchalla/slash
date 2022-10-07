@@ -20,11 +20,27 @@ def main():
     """
     parser = argparse.ArgumentParser(description="Slash")
     parser.add_argument('--search', type=str, help='Product search query')
-    parser.add_argument('--num', type=int, help="Maximum number of records", default=3)
-    parser.add_argument('--sort', type=str, nargs='+', help="Sort according to re (relevance: default), pr (price) or ra (rating) or all", default="re")
-    parser.add_argument('--link', action='store_true', help="Show links in the table")
-    parser.add_argument('--des', action='store_true', help="Sort in descending (non-increasing) order")
-    parser.add_argument('--email', type=str, help="comma separated list of emails to send report", default="")
+    parser.add_argument('--num',
+                        type=int,
+                        help="Maximum number of records",
+                        default=3)
+    parser.add_argument(
+        '--sort',
+        type=str,
+        nargs='+',
+        help=
+        "Sort according to re (relevance: default), pr (price) or ra (rating) or all",
+        default="re")
+    parser.add_argument('--link',
+                        action='store_true',
+                        help="Show links in the table")
+    parser.add_argument('--des',
+                        action='store_true',
+                        help="Sort in descending (non-increasing) order")
+    parser.add_argument('--email',
+                        type=str,
+                        help="comma separated list of emails to send report",
+                        default="")
     args = parser.parse_args()
 
     products1 = scraper.searchAmazon(args.search)
@@ -32,9 +48,12 @@ def main():
     products3 = scraper.searchTarget(args.search)
     finalistList = []
     for sortBy in args.sort:  # collate all the product results from individual website
-        finalistList.append(formatter.sortList(products1, sortBy, args.des)[:args.num])
-        finalistList.append(formatter.sortList(products2, sortBy, args.des)[:args.num])
-        finalistList.append(formatter.sortList(products3, sortBy, args.des)[:args.num])
+        finalistList.append(
+            formatter.sortList(products1, sortBy, args.des)[:args.num])
+        finalistList.append(
+            formatter.sortList(products2, sortBy, args.des)[:args.num])
+        finalistList.append(
+            formatter.sortList(products3, sortBy, args.des)[:args.num])
         mergedResults = email_utils.alternateMerge(finalistList)
         results = formatter.sortList(mergedResults, sortBy, args.des)
 
@@ -46,6 +65,7 @@ def main():
     print("Execution Completed :)")
     print()
     print()
+
 
 if __name__ == '__main__':
     """
