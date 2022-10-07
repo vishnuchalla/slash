@@ -49,7 +49,7 @@ Sr. No| Notes|Self-assement|Evidence|
 43| Troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages| 0 | NA |
 44| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation| 1 |Kept as future scope|
 45| Documentation stored under revision control with source code| 3 | https://github.com/vishnuchalla/slash#readme |
-46| Publishing the release history e.g. release data, version numbers, key features of each release etc. in your documentation | 3 | https://github.com/secheaper/slash/releases/tag/v1.0.0 |
+46| Publishing the release history e.g. release data, version numbers, key features of each release etc. in your documentation | 3 | https://github.com/vishnuchalla/slash/releases/tag/v1.0.1 |
 47| Software describes how a user can get help with using your software | 3 | https://github.com/vishnuchalla/slash#readme |
 48| Our documentation describes what support we provide to users and developers | 3 | https://github.com/vishnuchalla/slash#readme |
 49| Project has an e-mail address or forum that is solely for supporting users | 3 | secheaper@gmail.com |
