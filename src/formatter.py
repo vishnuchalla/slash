@@ -21,6 +21,12 @@ def formatResult(website, titles, prices, links, ratings):
     The formatResult function takes the scraped HTML as input, and extracts the 
     necessary values from the HTML code. Ex. extracting a price '$19.99' from
     a paragraph tag.
+    :param website: website to scrape
+    :param titles: title of the product
+    :param prices: price of the product
+    :param links: link of the product
+    :param ratings: ratings of the product
+    return: formatted result of the product
     """
 
     title, price, link, rating = '', '', '', ''  # the default values when the data is not available in scrapped
@@ -71,6 +77,10 @@ def sortList(arr, sortBy, reverse):
     """
     The sortList function is used to sort the products list based on the
     flags provided as args. Currently, it supports sorting by price.
+    :param arr: input array
+    :param sortBy: sort by parameter
+    :param reverse: flag to reverse the sort order
+    return: result array
     """
     if sortBy == "pr":
         return sorted(arr,
@@ -93,6 +103,8 @@ def formatSearchQuery(query):
     """
     The formatSearchQuery function formats the search string into a string that 
     can be sent as a url paramenter.
+    :param query: input query
+    return: replaced string
     """
     return query.replace(" ", "+")
 
@@ -100,6 +112,8 @@ def formatSearchQuery(query):
 def formatTitle(title):
     """
     The formatTitle function formats titles extracted from the scraped HTML code.
+    :param title: title to format
+    return: formatted title
     """
     if (len(title) > 40):
         return title[:40] + "..."
@@ -110,6 +124,8 @@ def getNumbers(st):
     """
     The getNumbers function extracts float values (price) from a string.
     Ex. it extracts 10.99 from '$10.99' or 'starting at $10.99'
+    :param st: price string
+    :return number
     """
     if type(st) == str:
         ans = ''
