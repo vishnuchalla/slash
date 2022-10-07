@@ -46,19 +46,19 @@ def main():
     products1 = scraper.searchAmazon(args.search, args.link)
     products2 = scraper.searchWalmart(args.search, args.link)
     products3 = scraper.searchTarget(args.search, args.link)
+    finalistList = []
     for sortBy in args.sort:
-        products1 = formatter.sortList(products1, sortBy, args.des)[:args.num]
-        products2 = formatter.sortList(products2, sortBy, args.des)[:args.num]
-        products3 = formatter.sortList(products3, sortBy, args.des)[:args.num]
-        mergedLists = email_utils.alternateMerge(products1 + products2 +
-                                                 products3)
-        results = formatter.sortList(mergedLists, sortBy, args.des)
+        finalistList.append(formatter.sortList(products1, sortBy, args.des)[:args.num])
+        finalistList.append(formatter.sortList(products2, sortBy, args.des)[:args.num])
+        finalistList.append(formatter.sortList(products3, sortBy, args.des)[:args.num])
+        mergedResults = email_utils.alternateMerge(finalistList)
+        results = formatter.sortList(mergedResults, sortBy, args.des)
 
     print()
     print()
     print(tabulate(results, headers="keys", tablefmt="github"))
     print("\nWriting data to items.csv\n")
-    email_utils.write_data(results, args.email)
+    email_utils.write_data(results, args.link, args.email)
     print("Done :)")
     print()
     print()
