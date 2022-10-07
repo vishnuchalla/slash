@@ -25,7 +25,7 @@ Sr. No| Notes|Self-assement|Evidence|
 19| test cases exist|3|https://github.com/vishnuchalla/slash/tree/main/tests|
 20| test cases are routinely executed|3|https://github.com/vishnuchalla/slash/actions/workflows/python-app.yml|
 21| the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|2|https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md|
-22| issues are discussed before they are closed|1| There is a discussion channel on our discord server |
+22| issues are discussed before they are closed|3| There is a discussion channel on our discord server and all the issues are discussed on github before closing|
 23| Chat channel: exists|3|https://discord.gg/K4khCZGR|
 24| test cases:.a large proportion of the issues related to handling failing cases.| 3 |if a test case fails, open an issue and fix it|
 25| evidence that the whole team is using the same tools: everyone can get to all tools and files | 3 | We can clearly see that entire codebase has been written in Python(https://github.com/vishnuchalla/slash/search?l=python). Everyone has the same access to the repository and also have equal access to comitting directly to the main branch. |
