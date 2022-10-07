@@ -57,48 +57,48 @@ Sr. No| Notes|Self-assement|Evidence|
 51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/vishnuchalla/slash/issues) |
 52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/vishnuchalla/slash/issues) |
 53| Software’s architecture and design is modular | 3 ||
-54| Software uses an accepted coding standard or convention | 3 | https://github.com/secheaper/slash/blob/main/CODE-OF-CONDUCT.md, https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
+54| Software uses an accepted coding standard or convention | 3 | https://github.com/vishnuchalla/slash/blob/main/CODE-OF-CONDUCT.md, https://github.com/vishnuchalla/slash/blob/main/CODE-OF-CONDUCT.md |
 55| Software allows data to be imported and exported using open data formats | 1 | To be added in future |
 56| Software allows communications using open communications protocols |3||
 57| Software cross-platform compatible | 3 | The only thing needed is python. It will work on all operating systems that have python. |
 58| Software adhere to appropriate accessibility conventions or standards |3||
 59| Documentation adheres to appropriate accessibility conventions or standards | 2 ||
 60| Each source code releases a snapshot of the repository |2 ||
-61| Releases are tagged in the repository | 3 | https://github.com/secheaper/slash/releases/tag/v1.0.0 |
+61| Releases are tagged in the repository | 3 | https://github.com/vishnuchalla/slash/tree/v1.0.1 |
 62| There is a branch of the repository that is always stable | 3 | the main branch is always stable |
 63| Back-up your repository | 3| dev is created for backup|
-64| Provide publicly available instructions for building the software from the source code | 3| https://github.com/secheaper/slash/blob/main/README.md|
+64| Provide publicly available instructions for building the software from the source code | 3| https://github.com/vishnuchalla/slash/blob/main/README.md|
 65| Build, or package, the software using an automated tool | 3||
 66| Provide publicly-available instructions for deploying the software | 2||
-67| Documentation list all third-party dependencies | 3|https://github.com/secheaper/slash/blob/main/requirements.txt|
-68| Documentation lists the version number for all third-party dependencies | 3|https://github.com/secheaper/slash/blob/main/requirements.txt|
+67| Documentation list all third-party dependencies | 3|https://github.com/vishnuchalla/slash/blob/main/requirements.txt|
+68| Documentation lists the version number for all third-party dependencies | 3|https://github.com/vishnuchalla/slash/blob/main/requirements.txt|
 69| Software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional |2| Dependencies in requirements.txt|
 70| Download dependencies using a dependency management tool or package manager | 3| Requirements can be downloaded by pip|
-71| Tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful |3 |https://github.com/secheaper/slash/tree/main/tests|
-72| Automated test suite for your software | 3 | https://github.com/secheaper/slash/tree/main/tests |
+71| Tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful |3 |https://github.com/vishnuchalla/slash/tree/main/tests|
+72| Automated test suite for your software | 3 | https://github.com/vishnuchalla/slash/tree/main/tests |
 73| Framework to periodically (e.g. nightly) run your tests on the latest version of the source code |0|NA (will be a part of future roadmap)|
-74| Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
-75| Test results publicly visible | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
+74| Using continuous integration, automatically running tests whenever changes are made to your source code | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
+75| Test results publicly visible | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 76| Manually-run tests documented |2||
 77| Project has resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software |1 |NA|
-78| Documentation states how many projects and users are associated with your project | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
-79| Provide success stories on your website |2 |Future scope|
-80| Listing the important partners and collaborators in our documentation | 3 | https://github.com/secheaper/slash/actions/workflows/workflow.yml |
+78| Documentation states how many projects and users are associated with your project | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
+79| Provide success stories on your website | 3 |Future scope|
+80| Listing the important partners and collaborators in our documentation | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 81| Listing the project's publications on our website or link to a resource where these are available | 3||
 82| Listing third-party publications that refer to the software on our website or link to a resource where these are available | 3||
-83| Users can subscribe to notifications to changes to your source code repository | 2 | Each contributor gets an email when any issues they are assigned gets an update. |
+83| Users can subscribe to notifications to changes to your source code repository | 3 | Each contributor gets an email when any issues they are assigned gets an update. |
 84| Since the software is developed as an open source project (and, not just a project developing open source software), do we have a governance model | 1| NA|
-85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | We received a Pull Request from someone outside of our project fixing one of our issues (https://github.com/secheaper/slash/pull/15). He was simply browsing Github and came across our repo when he searched for the "good-first-issue" keyword. | 
-86| Do you have a contributions policy | 3 | https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
-87| Is your contributions' policy publicly available? | 3 | https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
-88| Do contributors keep the copyright/IP of their contributions |3|https://github.com/secheaper/slash/commit/4f8418f1d12ddebf260c259b1047873475536457|
-89| Website and documentation clearly states the copyright owners of your software and documentation | 2||
+85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | Yes | 
+86| Do you have a contributions policy | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
+87| Is your contributions' policy publicly available? | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
+88| Do contributors keep the copyright/IP of their contributions |3| Yes |
+89| Website and documentation clearly states the copyright owners of your software and documentation | 3| Yes |
 90| Do each of your source code files include a copyright statement | 3 | Can be seen in all the python codes |
-91| The website and documentation clearly state the licence of your software | 3 | https://github.com/secheaper/slash/blob/main/LICENSE |
-92| Software released under an open source licence | 3 | https://github.com/secheaper/slash/blob/main/LICENSE |
-93| Software released under an OSI-approved open-source licence | 3 | https://github.com/secheaper/slash/blob/main/LICENSE |
-94| Source code files include a licence header | 3 | MIT License(https://github.com/secheaper/slash/blob/main/LICENSE) |
-95| Recommended citation for your software | 2||
-96| Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 3|https://github.com/secheaper/slash/projects/1|
+91| The website and documentation clearly state the licence of your software | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
+92| Software released under an open source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
+93| Software released under an OSI-approved open-source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
+94| Source code files include a licence header | 3 | MIT License(https://github.com/vishnuchalla/slash/blob/main/LICENSE) |
+95| Recommended citation for your software | 3||
+96| Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 3|https://github.com/users/vishnuchalla/projects/1|
 97| Documentation describe how the project is funded, and the period over which funding is guaranteed? |1| NA|
 98| Do you make timely announcements of the deprecation of components, APIs, etc. |1| NA|
