@@ -126,9 +126,9 @@ Hi There,
     csv_file = open(file, 'r')
     reader = csv.reader(csv_file, delimiter='\t')
     for idx, row in enumerate(reader):
-        if (idx == 0):
+        if idx == 0:
             continue
-        if (idx == 15):
+        if idx == 15:
             break
         table_body += '\n\n' + "<tr>"
 
@@ -173,10 +173,10 @@ def write_data(results, receiver_emails):
     :param results: results data from the search queries.
     :param receiver_emails: list of comma separated emails.
     """
-    if (len(results) == 0):
+    if len(results) == 0:
         print("No results found for the search query. Hence no email on it")
         return
-    if (len(receiver_emails) == 0):
+    if len(receiver_emails) == 0:
         print("No email to send data. Hence not sending the email")
         return
     fieldnames = ['title', 'website', 'price', 'rating', 'timestamp']
