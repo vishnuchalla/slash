@@ -52,7 +52,7 @@ Sr. No| Notes|Self-assement|Evidence|
 46| Publishing the release history e.g. release data, version numbers, key features of each release etc. in your documentation | 3 | https://github.com/vishnuchalla/slash/releases/tag/v1.0.1 |
 47| Software describes how a user can get help with using your software | 3 | https://github.com/vishnuchalla/slash#readme |
 48| Our documentation describes what support we provide to users and developers | 3 | https://github.com/vishnuchalla/slash#readme |
-49| Project has an e-mail address or forum that is solely for supporting users | 3 | secheaper@gmail.com |
+49| Project has an e-mail address or forum that is solely for supporting users | 3 | kanchanrawat1102@gmail.com |
 50| E-mails to our support e-mail address are received by more than one person | 3 | we all have the access credentials to the support email | 
 51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/secheaper/slash/projects/1) |
 52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/secheaper/slash/projects/1) |
