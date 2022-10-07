@@ -6,7 +6,6 @@ You should have received a copy of the MIT license with
 this file. If not, please write to: secheaper@gmail.com
 
 """
-
 """
 The formatter module focuses on processing raw text and returning it in 
 the required format. 
@@ -41,12 +40,11 @@ def formatResult(website, titles, prices, links, ratings):
 
     if website == "target":
         price = prices
-    else: 
-        if prices: 
+    else:
+        if prices:
             price = prices[0].get_text().strip()
             price = re.search(r"\S+\d[\d,\.]*?\b", price)
             price = price.group()
-            
 
     if website == "target":
         link = links
@@ -55,7 +53,7 @@ def formatResult(website, titles, prices, links, ratings):
             link = links[0]['href']
             link = f'www.{website}.com{link}'
     link = linkShortener(link)
-    
+
     if website == "target":
         rating = ratings
     else:
@@ -63,13 +61,21 @@ def formatResult(website, titles, prices, links, ratings):
             rating = ratings[0].get_text().split()[0]
 
     product = {
-        'timestamp': datetime.now(pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
-        "title": formatTitle(title),
-        "price": price if price != '' else 'N.A',
-        "website": website,
-        "rating": rating if rating != '' else 'N.A',
-        "link":f'www.{website}.com{link}', 
-        "link": link
+        'timestamp':
+        datetime.now(
+            pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
+        "title":
+        formatTitle(title),
+        "price":
+        price if price != '' else 'N.A',
+        "website":
+        website,
+        "rating":
+        rating if rating != '' else 'N.A',
+        "link":
+        f'www.{website}.com{link}',
+        "link":
+        link
     }
     return product
 
@@ -142,6 +148,7 @@ def getNumbers(st):
         return ans
     else:
         return st
+
 
 def linkShortener(long_url):
     if not bool(long_url): return "https://www.ncsu.edu/"
