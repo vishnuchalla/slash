@@ -82,7 +82,7 @@ Sr. No| Notes|Self-assement|Evidence|
 76| Manually-run tests documented |2||
 77| Project has resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software |1 |NA|
 78| Documentation states how many projects and users are associated with your project | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
-79| Provide success stories on your website |2 |Future scope|
+79| Provide success stories on your website | 3 |Future scope|
 80| Listing the important partners and collaborators in our documentation | 3 | https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml |
 81| Listing the project's publications on our website or link to a resource where these are available | 3||
 82| Listing third-party publications that refer to the software on our website or link to a resource where these are available | 3||
@@ -91,8 +91,8 @@ Sr. No| Notes|Self-assement|Evidence|
 85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | Yes | 
 86| Do you have a contributions policy | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
 87| Is your contributions' policy publicly available? | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
-88| Do contributors keep the copyright/IP of their contributions |3||
-89| Website and documentation clearly states the copyright owners of your software and documentation | 3||
+88| Do contributors keep the copyright/IP of their contributions |3| Yes |
+89| Website and documentation clearly states the copyright owners of your software and documentation | 3| Yes |
 90| Do each of your source code files include a copyright statement | 3 | Can be seen in all the python codes |
 91| The website and documentation clearly state the licence of your software | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
 92| Software released under an open source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
