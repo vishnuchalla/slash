@@ -54,8 +54,8 @@ Sr. No| Notes|Self-assement|Evidence|
 48| Our documentation describes what support we provide to users and developers | 3 | https://github.com/vishnuchalla/slash#readme |
 49| Project has an e-mail address or forum that is solely for supporting users | 3 | kanchanrawat1102@gmail.com |
 50| E-mails to our support e-mail address are received by more than one person | 3 | we all have the access credentials to the support email | 
-51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/secheaper/slash/projects/1) |
-52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/secheaper/slash/projects/1) |
+51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/vishnuchalla/slash/issues) |
+52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/vishnuchalla/slash/issues) |
 53| Software’s architecture and design is modular | 3 ||
 54| Software uses an accepted coding standard or convention | 3 | https://github.com/secheaper/slash/blob/main/CODE-OF-CONDUCT.md, https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
 55| Software allows data to be imported and exported using open data formats | 1 | To be added in future |
