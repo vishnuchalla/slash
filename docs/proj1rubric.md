@@ -21,7 +21,7 @@ Sr. No| Notes|Self-assement|Evidence|
 15| Use of code  formatters. |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
 16| Use of syntax checkers. | 3 |https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
 17| Use of code coverage |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml|
-18| other automated analysis tools|2||
+18| other automated analysis tools|2|Github workflow actions|
 19| test cases exist|3|https://github.com/vishnuchalla/slash/tree/main/tests|
 20| test cases are routinely executed|3|https://github.com/vishnuchalla/slash/actions/workflows/python-app.yml|
 21| the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|2|https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md|
@@ -30,8 +30,8 @@ Sr. No| Notes|Self-assement|Evidence|
 24| test cases:.a large proportion of the issues related to handling failing cases.| 3 |if a test case fails, open an issue and fix it|
 25| evidence that the whole team is using the same tools: everyone can get to all tools and files | 3 | We can clearly see that entire codebase has been written in Python(https://github.com/vishnuchalla/slash/search?l=python). Everyone has the same access to the repository and also have equal access to comitting directly to the main branch. |
 26| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3 ||
-27| evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)| 3 | https://github.com/secheaper/slash/graphs/contributors |
-28| Evidence that the members of the team are working across multiple places in the code base | 3 | https://github.com/secheaper/slash/graphs/contributors |
+27| evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)| 3 | https://github.com/vishnuchalla/slash/graphs/contributors |
+28| Evidence that the members of the team are working across multiple places in the code base | 3 | https://github.com/vishnuchalla/slash/graphs/contributors |
 29| short release cycles | 3 |(hard to see in short projects) project members are committing often enough so that everyone can get your work|
 30| Documentation provides clear overview of software and uses | 3 | https://github.com/vishnuchalla/slash#readme |
 31| Website and documentation clearly describe the type of user who should use your software | 3 | https://github.com/vishnuchalla/slash#readme |
@@ -42,20 +42,20 @@ Sr. No| Notes|Self-assement|Evidence|
 36| Software available for free | 3 | Our repository is public and can be clone and used by anyone. (https://github.com/vishnuchalla/slash) |
 37| Source code publicly available to download, either as a downloadable bundle or via access to a source code repository | 3 | git clone https://github.com/vishnuchalla/slash.git or Download as a zip file from here https://github.com/vishnuchalla/slash/archive/refs/heads/main.zip |
 38| Software hosted in an established, third-party repository likeGitHub (https://github.com) | 3 ||
-39| Documentation clearly available within your software | 3 | https://github.com/secheaper/slash#readme |
+39| Documentation clearly available within your software | 3 | https://github.com/vishnuchalla/slash#readme |
 40| Documentation includes a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use | 3 | https://github.com/vishnuchalla/slash#readme |
 41| Providing more extensive documentation, that gives a clear, step-by-step instructions on how to deploy and use our software | 3 | https://github.com/vishnuchalla/slash#readme |
 42| Comprehensive guide to all your software’s commands, functions and options| 3 | We have defined one use case of each command or function that can be performed by our code. https://github.com/vishnuchalla/slash#readme |
 43| Troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages| 0 | NA |
 44| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation| 1 |Kept as future scope|
 45| Documentation stored under revision control with source code| 3 | https://github.com/vishnuchalla/slash#readme |
-46| Publishing the release history e.g. release data, version numbers, key features of each release etc. in your documentation | 3 | https://github.com/secheaper/slash/releases/tag/v1.0.0 |
+46| Publishing the release history e.g. release data, version numbers, key features of each release etc. in your documentation | 3 | https://github.com/vishnuchalla/slash/releases/tag/v1.0.1 |
 47| Software describes how a user can get help with using your software | 3 | https://github.com/vishnuchalla/slash#readme |
 48| Our documentation describes what support we provide to users and developers | 3 | https://github.com/vishnuchalla/slash#readme |
-49| Project has an e-mail address or forum that is solely for supporting users | 3 | secheaper@gmail.com |
+49| Project has an e-mail address or forum that is solely for supporting users | 3 | kanchanrawat1102@gmail.com |
 50| E-mails to our support e-mail address are received by more than one person | 3 | we all have the access credentials to the support email | 
-51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/secheaper/slash/projects/1) |
-52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/secheaper/slash/projects/1) |
+51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/vishnuchalla/slash/issues) |
+52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/vishnuchalla/slash/issues) |
 53| Software’s architecture and design is modular | 3 ||
 54| Software uses an accepted coding standard or convention | 3 | https://github.com/secheaper/slash/blob/main/CODE-OF-CONDUCT.md, https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
 55| Software allows data to be imported and exported using open data formats | 1 | To be added in future |
