@@ -28,7 +28,7 @@ def main():
     products2 = scraper.searchWalmart(args.search)
     products3 = scraper.searchTarget(args.search)
     finalistList = []
-    for sortBy in args.sort:
+    for sortBy in args.sort:  # collate all the product results from individual website
         finalistList.append(formatter.sortList(products1, sortBy, args.des)[:args.num])
         finalistList.append(formatter.sortList(products2, sortBy, args.des)[:args.num])
         finalistList.append(formatter.sortList(products3, sortBy, args.des)[:args.num])
