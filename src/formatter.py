@@ -47,7 +47,7 @@ def formatResult(website, titles, prices, links, ratings):
         if links: 
             link = links[0]['href']
             link = f'www.{website}.com{link}'
-    link = linkShortner(link)
+    link = linkShortener(link)
     
     if website == "target":
         rating = ratings
@@ -118,7 +118,7 @@ def getNumbers(st):
     else:
         return st
 
-def linkShortner(long_url):
+def linkShortener(long_url):
     if not bool(long_url): return "https://www.ncsu.edu/"
     type_tiny = pyshorteners.Shortener()
     short_url = type_tiny.tinyurl.short(long_url)
