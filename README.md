@@ -210,4 +210,4 @@ python slash.py --search "philips hue" --num 5
 :email: Support
 ---
 
-For any queries and help, please reach out to us at: secheaper@gmail.com
+For any queries and help, please reach out to us at: vchalla2@ncsu.edu
