@@ -32,8 +32,9 @@ def test_formatResults():
     links = []
 
     product = formatter.formatResult("example", titles, prices, links, ratings)
-    ans = {"title": "title", "price": "$0.99", "website": "example", "rating": "4.1"}
+    ans = {"title": "title", "price": "$0.99", "website": "example", "rating": "4.1", "link" : "https://www.ncsu.edu/"}
     print(product["website"], ans["website"])
 
     assert product["title"] == ans["title"] and product["price"] == ans["price"] and \
-           product["website"] == ans["website"] and product["rating"] == ans["rating"]
+           product["website"] == ans["website"] and product["rating"] == ans["rating"] \
+           and product["link"] == ans["link"]

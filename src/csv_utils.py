@@ -14,8 +14,8 @@ the required format.
 
 import csv
 
-def write_data(results):
-    fieldnames = ['timestamp', 'title', 'price', 'website', 'rating']
+def write_data(results, linkFlag):
+    fieldnames = ['timestamp', 'title', 'price', 'website', 'rating', 'link'] if linkFlag else ['timestamp', 'title', 'price', 'website', 'rating']
     with open("items.csv", "w", encoding="UTF-8", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

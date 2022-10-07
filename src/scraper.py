@@ -66,7 +66,7 @@ def httpsGetTarget(URL,query):
     results_json = response.json()
     return results_json
 
-def searchAmazon(query):
+def searchAmazon(query, linkFlag):
     """
     The searchAmazon function scrapes amazon.com
     """
@@ -79,11 +79,13 @@ def searchAmazon(query):
         titles, prices, links = res.select("h2 a span"), res.select("span.a-price span"), res.select("h2 a.a-link-normal")
         ratings = res.select("span.a-icon-alt")
         product = formatter.formatResult("amazon",  titles, prices, links, ratings)
+        if not linkFlag:
+            del product["link"]
         if prices is not None:
             products.append(product)
     return products
 
-def searchWalmart(query):
+def searchWalmart(query, linkFlag):
     """
     The searchWalmart function scrapes walmart.com
     """
@@ -100,12 +102,14 @@ def searchWalmart(query):
         else:
             ratings = None
         product = formatter.formatResult("walmart", titles, prices, links, ratings)
+        if not linkFlag:
+            del product["link"]
         if prices is not None:
             products.append(product)
     return products
 
 
-def searchTarget(query):
+def searchTarget(query, linkFlag):
     """
     The searchTarget function scrapes hidden API of target.com
     """
@@ -126,6 +130,8 @@ def searchTarget(query):
         else:
             links=''
         product = formatter.formatResult("target",titles, prices, links, ratings)
+        if not linkFlag:
+            del product["link"]
         if prices is not None:
             products.append(product)
     return products
