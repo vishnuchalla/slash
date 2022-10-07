@@ -4,8 +4,8 @@
 
 Sr. No| Notes|Self-assement|Evidence|
 |----|--------|------|-------|
-1| workload is spread over the whole team (one team member is often Xtimes more productive than the others... | 3 | All contributors have made significant commits in the codebase. (https://github.com/secheaper/slash/graphs/contributors) |
-2| but nevertheless, here is a track record that everyone is contributing a lot)|3|https://github.com/secheaper/slash/pulse|
+1| workload is spread over the whole team (one team member is often Xtimes more productive than the others... | 3 | All contributors have made significant commits in the codebase. (https://github.com/vishnuchalla/slash/graphs/contributors) |
+2| but nevertheless, here is a track record that everyone is contributing a lot)|3|https://github.com/vishnuchalla/slash/pulse|
 3| Number of commits|3|https://github.com/secheaper/slash/pulse|
 4| Number of commits: by different people|3|https://github.com/secheaper/slash/pulse|
 5| Issues reports: there are **many**|3|[Issues](https://github.com/vishnuchalla/slash/issues)|
