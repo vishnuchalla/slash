@@ -57,7 +57,7 @@ Sr. No| Notes|Self-assement|Evidence|
 51| Project have a ticketing system to manage bug reports and feature requests | 3 | We constantly create issues and have an ticketing  system  on github projects where we assign each member an issue based on priority. (https://github.com/vishnuchalla/slash/issues) |
 52| Project's ticketing system publicly visible to your users, so they can view bug reports and feature requests | 3 | It's an open link on our public repo (https://github.com/vishnuchalla/slash/issues) |
 53| Software’s architecture and design is modular | 3 ||
-54| Software uses an accepted coding standard or convention | 3 | https://github.com/secheaper/slash/blob/main/CODE-OF-CONDUCT.md, https://github.com/secheaper/slash/blob/main/CONTRIBUTING.md |
+54| Software uses an accepted coding standard or convention | 3 | https://github.com/vishnuchalla/slash/blob/main/CODE-OF-CONDUCT.md, https://github.com/vishnuchalla/slash/blob/main/CODE-OF-CONDUCT.md |
 55| Software allows data to be imported and exported using open data formats | 1 | To be added in future |
 56| Software allows communications using open communications protocols |3||
 57| Software cross-platform compatible | 3 | The only thing needed is python. It will work on all operating systems that have python. |
