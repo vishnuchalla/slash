@@ -15,22 +15,22 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 - **Easy**: Slash uses very easy commands to filter, sort and search your items
 - **Powerful**: Quickly alter the commands to get desired results
 
-<p align="center">
-  <a href="#rocket-installation">Installation</a>
-  ::
-  <a href="#golf-flags-and-command-line-arguments">Flags & Args</a>
-  ::
-  <a href="#card_index_dividers-some-examples">Examples</a>
-  ::
-  <a href="#thought_balloon-use-case">Use Case</a>
-  ::
-  <a href="#page_facing_up-why">Why</a>
-  ::
-  <a href="#sparkles-contributors">Contributors</a>
-    ::
-  <a href="#email-support">Support</a>
+<ul align="left">
+  <li> <a href="#rocket-installation">Installation</a> </li>
   
-</p>
+  <li> <a href="#golf-flags-and-command-line-arguments">Flags & Args</a> </li>
+  
+  <li><a href="#card_index_dividers-some-examples">Examples</a></li>
+  
+  <li><a href="#thought_balloon-use-case">Use Case</a></li>
+  
+  <li><a href="#page_facing_up-why">Why</a></li>
+  
+  <li><a href="#sparkles-contributors">Contributors</a></li>
+  
+  <li><a href="#email-support">Support</a></li>
+  
+</ul>
 
 ---
 
@@ -67,7 +67,7 @@ Currently the tool supports the following flags and command line arguments. Thes
 |-----------|------|---------|----------------------------------------------------------------------|
 | --search  | str  | None    | The product name to be used as the search query                      |
 | --num     | int  | 3       | Maximum number of products to search                                 |
-| --sort    | str  | re      | Sort results by relevance (re) or by price (pr)                      |
+| --sort    | str  | re      | Sort results by relevance (re), by price (pr), by rating (ra) or by all the features using "all" this sorts in the order of price and ratings in the respective order|
 | --des     | bool | -       | Set boolean flag if results should be sorted in non-increasing order |
 
 :card_index_dividers: Some Examples
