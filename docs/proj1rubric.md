@@ -91,13 +91,13 @@ Sr. No| Notes|Self-assement|Evidence|
 85| Do we accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 | We received a Pull Request from someone outside of our project fixing one of our issues. He was simply browsing Github and came across our repo when he searched for the "good-first-issue" keyword. | 
 86| Do you have a contributions policy | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
 87| Is your contributions' policy publicly available? | 3 | https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md |
-88| Do contributors keep the copyright/IP of their contributions |3|https://github.com/secheaper/slash/commit/4f8418f1d12ddebf260c259b1047873475536457|
+88| Do contributors keep the copyright/IP of their contributions |3||
 89| Website and documentation clearly states the copyright owners of your software and documentation | 2||
 90| Do each of your source code files include a copyright statement | 3 | Can be seen in all the python codes |
-91| The website and documentation clearly state the licence of your software | 3 | https://github.com/secheaper/slash/blob/main/LICENSE |
-92| Software released under an open source licence | 3 | https://github.com/secheaper/slash/blob/main/LICENSE |
-93| Software released under an OSI-approved open-source licence | 3 | https://github.com/secheaper/slash/blob/main/LICENSE |
-94| Source code files include a licence header | 3 | MIT License(https://github.com/secheaper/slash/blob/main/LICENSE) |
+91| The website and documentation clearly state the licence of your software | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
+92| Software released under an open source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
+93| Software released under an OSI-approved open-source licence | 3 | https://github.com/vishnuchalla/slash/blob/main/LICENSE |
+94| Source code files include a licence header | 3 | MIT License(https://github.com/vishnuchalla/slash/blob/main/LICENSE) |
 95| Recommended citation for your software | 2||
 96| Documentation includes a project roadmap (a list of project and development milestones for the next 3, 6 months) | 3|https://github.com/secheaper/slash/projects/1|
 97| Documentation describe how the project is funded, and the period over which funding is guaranteed? |1| NA|
