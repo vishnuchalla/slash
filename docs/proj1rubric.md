@@ -21,7 +21,7 @@ Sr. No| Notes|Self-assement|Evidence|
 15| Use of code  formatters. |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
 16| Use of syntax checkers. | 3 |https://github.com/vishnuchalla/slash/blob/main/.github/workflows/python-app.yml|
 17| Use of code coverage |3|https://github.com/vishnuchalla/slash/blob/main/.github/workflows/workflow.yml|
-18| other automated analysis tools|2||
+18| other automated analysis tools|2|Github workflow actions|
 19| test cases exist|3|https://github.com/vishnuchalla/slash/tree/main/tests|
 20| test cases are routinely executed|3|https://github.com/vishnuchalla/slash/actions/workflows/python-app.yml|
 21| the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|2|https://github.com/vishnuchalla/slash/blob/main/CONTRIBUTING.md|
