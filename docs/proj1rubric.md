@@ -31,7 +31,7 @@ Sr. No| Notes|Self-assement|Evidence|
 25| evidence that the whole team is using the same tools: everyone can get to all tools and files | 3 | We can clearly see that entire codebase has been written in Python(https://github.com/vishnuchalla/slash/search?l=python). Everyone has the same access to the repository and also have equal access to comitting directly to the main branch. |
 26| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3 ||
 27| evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)| 3 | https://github.com/vishnuchalla/slash/graphs/contributors |
-28| Evidence that the members of the team are working across multiple places in the code base | 3 | https://github.com/secheaper/slash/graphs/contributors |
+28| Evidence that the members of the team are working across multiple places in the code base | 3 | https://github.com/vishnuchalla/slash/graphs/contributors |
 29| short release cycles | 3 |(hard to see in short projects) project members are committing often enough so that everyone can get your work|
 30| Documentation provides clear overview of software and uses | 3 | https://github.com/vishnuchalla/slash#readme |
 31| Website and documentation clearly describe the type of user who should use your software | 3 | https://github.com/vishnuchalla/slash#readme |
