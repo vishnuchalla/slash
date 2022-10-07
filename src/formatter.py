@@ -24,7 +24,8 @@ def formatResult(website, titles, prices, links, ratings):
     a paragraph tag.
     """
 
-    title, price, link, rating = '', '', '', ''
+    title, price, link, rating = '', '', '', ''  # the default values when the data is not available in scrapped
+    # websites
     if website == "target":
         title = titles
     else:
@@ -55,7 +56,7 @@ def formatResult(website, titles, prices, links, ratings):
         # "link":f'www.{website}.com{link}', 
         # "link": link, 
         "website": website,
-        "rating": rating if rating != '' else 'N.A'
+        "rating": rating if rating != '' else 'N.A'  # if the rating is not available replace that with 'N.A'
     }
     return product
 
