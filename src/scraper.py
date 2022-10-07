@@ -26,6 +26,8 @@ def httpsGet(URL):
         "DNT": "1", "Connection": "close", "Upgrade-Insecure-Requests": "1"}
     page = requests.get(URL, headers=headers)
     soup1 = BeautifulSoup(page.content, "html.parser")
+
+
     return BeautifulSoup(soup1.prettify(), "html.parser")
 
 
