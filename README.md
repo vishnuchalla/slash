@@ -71,6 +71,7 @@ Currently the tool supports the following flags and command line arguments. Thes
 | --num     | int  | 3       | Maximum number of products to search                                 |
 | --sort    | str  | re      | Sort results by relevance (re), by price (pr), by rating (ra) or by all the features using "all" this sorts in the order of price and ratings in the respective order|
 | --des     | bool | True      | Set boolean flag if results should be sorted in non-increasing order, the default value is true |
+| --email   | str  | "" (empty string) | list of comma separated emails to send notifications |
 
 :card_index_dividers: Some Examples
 ---
