@@ -60,7 +60,9 @@ def main():
     print()
     print()
     print(tabulate(results, headers="keys", tablefmt="github"))
-    print("\nTrying to send email notification to the customers if there are any...\n")
+    print(
+        "\nTrying to send email notification to the customers if there are any...\n"
+    )
     email_utils.write_data(results, args.link, args.email)
     print("Done :)")
     print()
