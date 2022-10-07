@@ -154,10 +154,10 @@ an integer value ```n``` and then returns ```n``` results from each website. Not
 the value of ```n``` and the number of results on the webiste. By default this value is set to 3. Example:
 ```
 For Mac
-python3 slash.py --search "philips hue" --num 5
+python3 slash.py --search "philips hue" --num 5 --email "vchalla2@ncsu.edu,svnsairam@ncsu.edu"
 
 For Windows
-python slash.py --search "philips hue" --num 5
+python slash.py --search "philips hue" --num 5 --email "vchalla2@ncsu.edu,sponnur@ncsu.edu"
 ```
 ```
 | timestamp                     | title                                       | price      | website   | rating   |
