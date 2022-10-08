@@ -12,7 +12,7 @@ Sr. No| Notes|Self-assement|Evidence|
 6|  issues are being  closed|3|[Closed Issues](https://github.com/vishnuchalla/slash/issues?q=is%3Aissue+is%3Aclosed)|
 7| DOI badge: exists |3|Present in [README](https://github.com/vishnuchalla/slash/blob/main/README.md)|
 8|Docs: doco generated , format not ugly|3 |https://github.com/vishnuchalla/slash/tree/main/docs|
-9|Docs: what: point descriptions of each class/function (in isolation) |3|https://github.com/vishnuchalla/slash/blob/main/README.md|
+9|Docs: what: point descriptions of each class/function (in isolation) |3|https://github.com/vishnuchalla/slash/tree/main/docs|
 10|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3|[Examples](https://github.com/vishnuchalla/slash/tree/dev#card_index_dividers-some-examples)|
 11|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3|[Section in README](https://github.com/vishnuchalla/slash/tree/dev#page_facing_up-why)|
 12|Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|3|https://github.com/vishnuchalla/slash/blob/main/assets/demo.gif | 
