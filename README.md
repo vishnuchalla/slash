@@ -37,7 +37,7 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 
 ---
 
-<p align="center"><img width="700" src="./assets/demo.gif"></p>
+<p align="center"><img width="700" src="./assets/DemoGif.gif"></p>
 
 ---
 
