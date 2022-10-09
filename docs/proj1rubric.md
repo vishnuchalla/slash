@@ -35,7 +35,7 @@ Sr. No| Notes|Self-assement|Evidence|
 29| short release cycles | 3 |(hard to see in short projects) project members are committing often enough so that everyone can get your work|
 30| Documentation provides clear overview of software and uses | 3 | https://github.com/vishnuchalla/slash#readme |
 31| Website and documentation clearly describe the type of user who should use your software | 3 | https://github.com/vishnuchalla/slash#readme |
-32| Case studies to show how software is used by us | 3 | provided Gif in the README.md |
+32| Case studies to show how software is used by us | 3 | provided [Gif](https://github.com/vishnuchalla/slash/blob/main/assets/DemoGif.gif) in the README.md |
 33| Project name unique | 3 | Slash was derived from "slashing" prices down or reducing the prices of a product. |
 34| Project name free from trademark violations | 3 | We verified that "slash" has not been trademarked by any python repository or any US company. |
 35| Software available as a package that can be deployed without building it |3 ||
