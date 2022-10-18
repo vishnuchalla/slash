@@ -16,7 +16,7 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 - **Fast**: With slash, you can save over 50% of your time by comparing deals across websites within seconds
 - **Easy**: Slash uses very easy commands to filter, sort and search your items
 - **Powerful**: Quickly alter the commands to get desired results
-- **Informative**: Provides the information about itmes through an email with attached csv file
+- **Informative**: Provides the information about items through an email with attached csv file
 
 <ul align="left">
   <li> <a href="#rocket-installation">Installation</a> </li>
