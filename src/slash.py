@@ -6,7 +6,7 @@ You should have received a copy of the MIT license with
 this file. If not, please write to: secheaper@gmail.com
 
 """
-
+import datetime
 import argparse
 import scraper
 import formatter
@@ -18,6 +18,7 @@ def main():
     """
     Argument parser to capture command line and trigger the workflow
     """
+    start_time = datetime.datetime.now()
     parser = argparse.ArgumentParser(description="Slash")
     parser.add_argument('--search', type=str, help='Product search query')
     parser.add_argument('--num',
@@ -65,7 +66,8 @@ def main():
     email_utils.write_data(results, args.link, args.email)
     print("Done :)")
     print()
-    print()
+    end_time = datetime.datetime.now()
+    print("t1:{},t1:{}, diff = {}".format(start_time, end_time, end_time - start_time))
 
 
 if __name__ == '__main__':
