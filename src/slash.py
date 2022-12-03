@@ -78,21 +78,8 @@ def main():
                         help="list of email to get notified")
     args = parser.parse_args()
 
-    products1 = scraper.searchAmazon(args.search, args.link)
-    products2 = scraper.searchWalmart(args.search, args.link)
-    products3 = scraper.searchTarget(args.search, args.link)
-    finalistList = []
-    finalistList.append(
-        formatter.sortList(products1, args.sort, args.des)[:args.num])
-    finalistList.append(
-        formatter.sortList(products2, args.sort, args.des)[:args.num])
-    finalistList.append(
-        formatter.sortList(products3, args.sort, args.des)[:args.num])
-    mergedResults = email_utils.alternateMerge(finalistList)
-    results = formatter.sortList(mergedResults, args.sort, args.des)
+    results = extractProducts(args)
 
-    print()
-    print()
     print(tabulate(results, headers="keys", tablefmt="github"))
     print(
         "\nTrying to send email notification to the customers if there are any...\n"
