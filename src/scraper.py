@@ -10,7 +10,7 @@ The scraper module holds functions that actually scrape the e-commerce websites
 
 import requests
 import formatter
-from bs4 import BeautifulSoup
+from selectolax.parser import HTMLParser
 
 
 def httpsGet(URL):
