@@ -3,35 +3,57 @@ Copyright (C) 2021 SE Slash - All Rights Reserved
 You may use, distribute and modify this code under the
 terms of the MIT license.
 You should have received a copy of the MIT license with
-this file. If not, please write to: vamsitadikonda99@gmail.com
+this file. If not, please write to: vamsitadikonda@gmail.com
 
 The scraper module holds functions that actually scrape the e-commerce websites
 """
 
 import requests
 import formatter
+from bs4 import BeautifulSoup
 from selectolax.parser import HTMLParser
 
 
 def httpsGet(URL):
     """
-    The httpsGet funciton makes HTTP called to the requested URL with custom headers
+    The httpsGet function makes HTTP called to the requested URL with custom headers
     return: scraped html content from the URL
     """
     headers = {
         "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
         "Accept-Encoding": "gzip, deflate",
         "Accept":
-        "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "DNT": "1",
         "Connection": "close",
         "Upgrade-Insecure-Requests": "1"
     }
+    print(URL)
     page = requests.get(URL, headers=headers)
     soup1 = BeautifulSoup(page.content, "html.parser")
 
     return BeautifulSoup(soup1.prettify(), "html.parser")
+
+
+def httpsGet1(URL):
+    """
+    The httpsGet function makes HTTP called to the requested URL with custom headers
+    return: scraped html content from the URL
+    """
+    headers = {
+        "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept":
+            "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "DNT": "1",
+        "Connection": "close",
+        "Upgrade-Insecure-Requests": "1"
+    }
+    print(URL)
+    page = requests.get(URL, headers=headers)
+    return page.content
 
 
 def httpsGetTarget(URL, query):
@@ -41,29 +63,29 @@ def httpsGetTarget(URL, query):
     """
     headers = {
         'authority':
-        'redsky.target.com',
+            'redsky.target.com',
         'accept':
-        'application/json',
+            'application/json',
         'accept-language':
-        'en-US,en;q=0.9,mr;q=0.8',
+            'en-US,en;q=0.9,mr;q=0.8',
         'origin':
-        'https://www.target.com',
+            'https://www.target.com',
         'referer':
-        URL,
+            URL,
         'sec-ch-ua':
-        '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
+            '"Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"',
         'sec-ch-ua-mobile':
-        '?0',
+            '?0',
         'sec-ch-ua-platform':
-        '"Windows"',
+            '"Windows"',
         'sec-fetch-dest':
-        'empty',
+            'empty',
         'sec-fetch-mode':
-        'cors',
+            'cors',
         'sec-fetch-site':
-        'same-site',
+            'same-site',
         'user-agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
     }
 
     params = {
@@ -80,7 +102,7 @@ def httpsGetTarget(URL, query):
         'scheduled_delivery_store_id': '961',
         'store_ids': '961,2721,1932,2785,3255',
         'useragent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
         'visitor_id': '018366FA85BE0201AE0C2E6660BAB7D2',
         'zip': '27606',
     }
@@ -93,7 +115,7 @@ def httpsGetTarget(URL, query):
     return results_json
 
 
-def searchAmazon(query, linkFlag):
+def searchAmazon1(query, linkFlag, product_queue):
     """
     The searchAmazon function scrapes amazon.com
     :param query: search keyword to perform the query
@@ -103,7 +125,6 @@ def searchAmazon(query, linkFlag):
     URL = f'https://www.amazon.com/s?k={query}'
     page = httpsGet(URL)
     results = page.findAll("div", {"data-component-type": "s-search-result"})
-    products = []
     for res in results:
         titles, prices, links = res.select("h2 a span"), res.select(
             "span.a-price span"), res.select("h2 a.a-link-normal")
@@ -113,11 +134,64 @@ def searchAmazon(query, linkFlag):
         if not linkFlag:
             del product["link"]
         if prices is not None:
-            products.append(product)
-    return products
+            product_queue.put(product)
 
 
-def searchWalmart(query, linkFlag):
+def searchAmazon(query, linkFlag, product_queue, limit=3):
+    """
+    The searchAmazon function scrapes amazon.com
+    :param query: search keyword to perform the query
+    return: returns the products list from amazon
+    """
+    query = formatter.formatSearchQuery(query)
+    URL = f'https://www.amazon.com/s?k={query}'
+    page = httpsGet1(URL)
+    tree = HTMLParser(page)
+    cnt = 0
+    for node in tree.tags("div"):
+        if 'data-component-type' in node.attributes and node.attributes['data-component-type'] == "s-search-result":
+            title = node.css_first("h2 a span").text()
+            price = node.css_first("span.a-price span").text()
+            link = node.css_first("h2 a.a-link-normal").text()
+            rating = node.css_first("span.a-icon-alt").text()
+            product = formatter.formatResult1("amazon", title, price, link, rating)
+            if not linkFlag:
+                del product["link"]
+            if price is not None:
+                product_queue.put(product)
+            cnt += 1
+            if cnt == limit:
+                break
+
+
+def searchWalmart(query, linkFlag, product_queue, limit=3):
+    """
+    The searchWalmart function scrapes walmart.com
+    :param query: search keyword to perform the query
+    return: returns the product list from walmart
+    """
+    query = formatter.formatSearchQuery(query)
+    URL = f'https://www.walmart.com/search?q={query}'
+    page = httpsGet1(URL)
+    tree = HTMLParser(page)
+    cnt = 0
+    for node in tree.tags("div"):
+        if 'data-item-id' in node.attributes:
+            title = node.css_first("span.lh-title").text() if node.css_first("span.lh-title") else None
+            price = node.css_first("div.lh-copy").text() if node.css_first("div.lh-copy") else None
+            link = node.css_first("a").attributes["href"] if node.css_first("a") else None
+            rating = node.css_first("span.w_EU").text() if node.css_first("span.w_EU") else None
+            product = formatter.formatResult1("walmart", title, price, link, rating)
+            if not linkFlag:
+                del product["link"]
+            if price is not None:
+                product_queue.put(product)
+            cnt += 1
+            if cnt == limit:
+                break
+
+
+def searchWalmart1(query, linkFlag, product_queue):
     """
     The searchWalmart function scrapes walmart.com
     :param query: search keyword to perform the query
@@ -127,7 +201,6 @@ def searchWalmart(query, linkFlag):
     URL = f'https://www.walmart.com/search?q={query}'
     page = httpsGet(URL)
     results = page.findAll("div", {"data-item-id": True})
-    products = []
     for res in results:
         titles, prices, links = res.select("span.lh-title"), res.select(
             "div.lh-copy"), res.select("a")
@@ -141,11 +214,10 @@ def searchWalmart(query, linkFlag):
         if not linkFlag:
             del product["link"]
         if prices is not None:
-            products.append(product)
-    return products
+            product_queue.put(product)
 
 
-def searchTarget(query, linkFlag):
+def searchTarget(query, linkFlag, product_queue, limit=3):
     """
     The searchTarget function scrapes hidden API of target.com
     :param query: search keyword to perform the query
@@ -156,6 +228,7 @@ def searchTarget(query, linkFlag):
     page = httpsGetTarget(URL, query)
     results = page['data']['search']['products']
     products = []
+    cnt=0
     for idx in range(len(results)):
         titles = results[idx]['item']['product_description']['title'].replace(
             '&#8482;', '')
@@ -176,5 +249,7 @@ def searchTarget(query, linkFlag):
         if not linkFlag:
             del product["link"]
         if prices is not None:
-            products.append(product)
-    return products
+            product_queue.put(product)
+        cnt += 1
+        if cnt == limit:
+            break
