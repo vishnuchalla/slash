@@ -12,6 +12,38 @@ import scraper
 import formatter
 import email_utils
 from tabulate import tabulate
+from queue import Queue
+from threading import Thread
+
+
+def extractProducts(args):
+    result_queue = Queue()
+    search = args.search if isinstance(args, argparse.Namespace) else args['search']
+    link = args.link if isinstance(args, argparse.Namespace) else args.get('link',True)
+    num = args.num if isinstance(args, argparse.Namespace) else args.get('num',3)
+    sort = args.sort if isinstance(args, argparse.Namespace) else args.get('sort',"re")
+    des = args.des if isinstance(args, argparse.Namespace) else args.get('des', True)
+
+    t1 = Thread(target=scraper.searchAmazon, args=(search, link, result_queue, num,), )
+    t2 = Thread(target=scraper.searchWalmart, args=(search, link, result_queue, num,), )
+    t3 = Thread(target=scraper.searchTarget, args=(search, link, result_queue, num,), )
+
+    # Starting threads...
+    t1.start()
+    t2.start()
+    t3.start()
+
+    # Waiting for threads to finish execution...
+    t1.join()
+    t2.join()
+    t3.join()
+
+    result_list = [result_queue.get() for i in range(result_queue.qsize())]
+    finalistList = [formatter.sortList(result_list, sort, des)[:num * 3]]
+
+    mergedResults = email_utils.alternateMerge(finalistList)
+    results = formatter.sortList(mergedResults, sort, des)
+    return results
 
 
 def main():
@@ -22,7 +54,9 @@ def main():
     parser = argparse.ArgumentParser(description="Slash")
     parser.add_argument('--search', type=str, help='Product search query')
     parser.add_argument('--num',
-                        type=int,
+                        type=int
+
+                        ,
                         help="Maximum number of records",
                         default=3)
     parser.add_argument(
