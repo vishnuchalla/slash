@@ -29,7 +29,6 @@ def httpsGet(URL):
         "Connection": "close",
         "Upgrade-Insecure-Requests": "1"
     }
-    print(URL)
     page = requests.get(URL, headers=headers)
     return page.content
 
@@ -93,28 +92,6 @@ def httpsGetTarget(URL, query):
     return results_json
 
 
-def searchAmazon1(query, linkFlag, product_queue):
-    """
-    The searchAmazon function scrapes amazon.com
-    :param query: search keyword to perform the query
-    return: returns the products list from amazon
-    """
-    query = formatter.formatSearchQuery(query)
-    URL = f'https://www.amazon.com/s?k={query}'
-    page = httpsGet(URL)
-    results = page.findAll("div", {"data-component-type": "s-search-result"})
-    for res in results:
-        titles, prices, links = res.select("h2 a span"), res.select(
-            "span.a-price span"), res.select("h2 a.a-link-normal")
-        ratings = res.select("span.a-icon-alt")
-        product = formatter.formatResult("amazon", titles, prices, links,
-                                         ratings)
-        if not linkFlag:
-            del product["link"]
-        if prices is not None:
-            product_queue.put(product)
-
-
 def searchAmazon(query, linkFlag, product_queue, limit=3):
     """
     The searchAmazon function scrapes amazon.com
@@ -123,7 +100,7 @@ def searchAmazon(query, linkFlag, product_queue, limit=3):
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.amazon.com/s?k={query}'
-    page = httpsGet1(URL)
+    page = httpsGet(URL)
     tree = HTMLParser(page)
     cnt = 0
     for node in tree.tags("div"):
@@ -150,7 +127,7 @@ def searchWalmart(query, linkFlag, product_queue, limit=3):
     """
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.walmart.com/search?q={query}'
-    page = httpsGet1(URL)
+    page = httpsGet(URL)
     tree = HTMLParser(page)
     cnt = 0
     for node in tree.tags("div"):
@@ -167,32 +144,6 @@ def searchWalmart(query, linkFlag, product_queue, limit=3):
             cnt += 1
             if cnt == limit:
                 break
-
-
-def searchWalmart1(query, linkFlag, product_queue):
-    """
-    The searchWalmart function scrapes walmart.com
-    :param query: search keyword to perform the query
-    return: returns the product list from walmart
-    """
-    query = formatter.formatSearchQuery(query)
-    URL = f'https://www.walmart.com/search?q={query}'
-    page = httpsGet(URL)
-    results = page.findAll("div", {"data-item-id": True})
-    for res in results:
-        titles, prices, links = res.select("span.lh-title"), res.select(
-            "div.lh-copy"), res.select("a")
-        ratings = res.select("span.w_EU")
-        if len(ratings) > 2:
-            ratings = [ratings[2]]
-        else:
-            ratings = None
-        product = formatter.formatResult("walmart", titles, prices, links,
-                                         ratings)
-        if not linkFlag:
-            del product["link"]
-        if prices is not None:
-            product_queue.put(product)
 
 
 def searchTarget(query, linkFlag, product_queue, limit=3):
