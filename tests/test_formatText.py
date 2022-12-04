@@ -7,7 +7,7 @@ this file. If not, please write to: secheaper@gmail.com
 
 """
 
-import formatter
+import src.api.formatter as formatter
 
 
 def test_formatSearchQuery():
