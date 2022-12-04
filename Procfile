@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath src.api wsgi
+web: gunicorn --chdir /src/api api.wsgi
