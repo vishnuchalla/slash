@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from slash import extractProducts
+from slash import extractProducts, send_email
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ CORS(app)
 def slash():
     args = request.args
     ret = extractProducts(args)
-    print(ret)
+    send_email(ret, args)
     return jsonify(ret)
 
 
