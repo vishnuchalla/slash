@@ -1,14 +1,13 @@
 import React , {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import { TextField, Button, Container, Table, TableBody, TableCell, TableRow, TableHead} from '@material-ui/core';
+import {TextField, Button, Container, Table, TableBody, TableCell, TableRow, TableHead} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
     head: {
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.common.white,
-        fontSize: 14,
+        backgroundColor: '#3f51b5',
+        color: 'white',
       },
   root: {
     margin: theme.spacing(1),
@@ -24,8 +23,9 @@ const useStyles = makeStyles((theme) => ({
     '&:nth-of-type(odd)': {
       backgroundColor: theme.palette.background.default,
     },
-},
-}));
+  },
+
+  }));
 
 export default function Home() {
   const[search,setToSearch]=useState('');
@@ -58,7 +58,11 @@ export default function Home() {
         fetch(myurl)
    .then(response => response.json())
    .then(data => setUsers(data));
-   //console.log(data)
+        console.log(email)
+
+        if((data=>setUsers(data)!=='') && email!==''){
+          alert("Email sent!");
+        }
         console.log("Search is sent to back end")
       }
 }
@@ -68,40 +72,42 @@ export default function Home() {
     <div>
     <Container>
     <Paper elevation={3} style={paperStyle}>
-    <h1 style={{color:'blue'}}>Sla$h</h1>
+    <img alt=""
+                src="logo.png"
+                width="150"
+                style={{ marginRight: "1.5em"}}
+              /><br></br><br></br>
     <form className={classes.root} noValidate autoComplete="off">
-    <TextField id="outlined-basic" label="Search product here" variant="outlined" value={search} onChange={(e)=>setToSearch(e.target.value)} required="required" fullWidth/><br/><br/>
-    <TextField id="outlined-basic" label="No of results to be displayed" type="number" variant="outlined" value={num} onChange={(e)=>setNumb(e.target.value)} required="required" min="3" fullWidth/><br/><br/>
-    <TextField id="outlined-basic" label="Enter Email Id" variant="outlined" value={email} onChange={(e)=>setEmail(e.target.value)}  fullWidth/>{error && <h4 style={{color: 'red'}}>{error}</h4>}<br/><br/>
+    <TextField id="outlined-basic" placeholder="Search product here" variant="outlined" value={search} onChange={(e)=>setToSearch(e.target.value)} required="required" fullWidth/><br/><br/>
+    <TextField id="outlined-basic" type='number' placeholder="No of results to be displayed" variant="outlined" value={num} required="required" InputProps={{ inputProps: { min: 3, max: 20 } }}precision={ 0 } onChange={(e)=>setNumb(e.target.value)} fullWidth/><br/><br/>
+    <TextField id="outlined-basic" placeholder="Enter Email Id" variant="outlined" value={email} onChange={(e)=>setEmail(e.target.value)}  fullWidth/>{error && <h4 style={{color: 'red'}}>{error}</h4>}<br/><br/>
     <Button variant="contained" color="primary" size="large" className={classes.button} onClick={handleClick}>Search <SearchIcon/></Button>
     </form>
     </Paper>
     </Container>
-    <h1 style={{color:'blue'}}>Here are your results :)</h1>
+    <h1 style={{color:'#3f51b5'}}>Here are your results :)</h1>
     <Container>
     <Paper elevation={3} className={classes.root}>
       <Table className={classes.table}>
         <TableHead className={classes.head}>
           <TableRow>
-            <TableCell align="right">Title</TableCell>
-            <TableCell align="right">Website</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Rating</TableCell>
-            <TableCell align="right">Timestamp</TableCell>
-            <TableCell>Where to find?</TableCell>
+            <TableCell style={{color:'#ffffff', fontSize: 17}} align="center">Title</TableCell>
+            <TableCell style={{color:'#ffffff', fontSize: 17}} align="center">Website</TableCell>
+            <TableCell style={{color:'#ffffff', fontSize: 17}} align="center">Price</TableCell>
+            <TableCell style={{color:'#ffffff', fontSize: 17}} align="center">Rating</TableCell>
+            <TableCell style={{color:'#ffffff', fontSize: 17}} align="center">Timestamp</TableCell>
+            <TableCell style={{color:'#ffffff', fontSize: 17}} align="center">Link</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {users.map(user => (
             <TableRow>
-              <TableCell component="th" scope="row">
-                {user.link}
-              </TableCell>
-              <TableCell align="right">{user.price}</TableCell>
-              <TableCell align="right">{user.rating}</TableCell>
-              <TableCell align="right">{user.timestamp}</TableCell>
-              <TableCell align="right">{user.title}</TableCell>
-              <TableCell align="right">{user.website}</TableCell>
+              <TableCell component="th" scope="row">{user.title}</TableCell>
+              <TableCell align="center">{user.website}</TableCell>
+              <TableCell align="center">{user.price}</TableCell>
+              <TableCell align="center">{user.rating}</TableCell>
+              <TableCell align="center">{user.timestamp}</TableCell>
+              <TableCell align="center">{user.link}</TableCell>
             </TableRow>
           ))}
         </TableBody>
