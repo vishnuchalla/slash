@@ -33,3 +33,10 @@ Vertical Scaling:
 As we add more RAM to the system to make room for 10 times more requests, it means that in 28 seconds the system will handle 100 times more requests than the initial benchmark.
 As there is a limitation to vertical scaling because of the hardware capabilities restriction, we can only scale till a certain point using vertical scaling.
 
+### How to scale 1000 times?
+
+To scale the initial benchmark to 1000 times we need to optimize the way we respond to requests at a system level as well as we need to scale the number of requests we handle in a unit time. We can follow the following steps to achieve that:
+First we should use a caching mechanism to handle duplicate requests and also use a caching mechanism to optimize the usage of resources to make the system faster.
+We can now use more API instances deployed using horizontal scaling of servers and other resources to handle 100 times more requests than the initial benchmarks.
+We should use Load balancer to balance the load across the 100 servers to optimize the hardware utilization.
+That means we have to deploy the optimized code on 100 servers to handle 100 times as many requests as one server handles. As we have developed the application using REST API’s each server can handle the requests independently.
