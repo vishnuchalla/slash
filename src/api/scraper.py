@@ -3,7 +3,7 @@ Copyright (C) 2021 SE Slash - All Rights Reserved
 You may use, distribute and modify this code under the
 terms of the MIT license.
 You should have received a copy of the MIT license with
-this file. If not, please write to: vamsitadikonda@gmail.com
+this file. If not, please write to: vamsitadikonda99@gmail.com
 
 The scraper module holds functions that actually scrape the e-commerce websites
 """
