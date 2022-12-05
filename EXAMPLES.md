@@ -9,19 +9,45 @@ Example:
 <p align="center"><img width="700" src="./assets/slash_web_demo_1.gif"></p>
 
 
-#### 4. Result length
+#### 2. Result length
 The maximum number of results that are scraped from each website can be set in the second text bar. It accepts
 a positive integer value from 1 to 15 number of results per each website. Incase of an invalid input, the results default this value to 3. 
 
 Example: In this example, The user searches for the same product with two different result lengths (2 and 4).
-<p align="center"><img width="700" src="./assets/slash_web_demo_2.gif"></p>
+<p align="center"><img width="700" src="assets/slash_web_demo_2.gif"></p>
 
 
-#### 6. Email Notification
+#### 3. Email Notification
 There is an option to send emails to customers using a parameter that accepts an email address. 
 
 Example:
 <p align="center"><img width="700" src="./assets/slash_web_demo_3.gif"></p>
+
+
+## REST API Examples
+#### 1. Searching
+
+The ```search``` parameter accepts one  string which it uses to search and scrape the requested products on 
+the e-commerce websites. This is a **mandatory field** for the REST API.
+The search string should be in double quotes if it has two or more words and you are using a web browser.It is not required in Postman. 
+
+Example:
+<p align="center"><img width="700" src="./assets/slash_rest_demo_1.gif"></p>
+
+#### 2. Result length
+The ```num``` parameter defines the maximum number of results that are scraped from each website can be set in the second text bar. It accepts
+a positive integer value from 1 to 15 number of results per each website. Incase of an invalid input, the results default this value to 3. This is a **mandatory field** for the REST API.
+
+Example: In this example, The user searches for the same product with two different result lengths (2 and 4).
+<p align="center"><img width="700" src="./assets/slash_rest_demo_2.gif"></p>
+
+#### 3. Email Notification
+The ```email``` parameter can be used to send a copy of the results. You can send the same email to multiple senders by seperating the emails by commas
+
+Example:
+<p align="center"><img width="700" src="./assets/slash_rest_demo_3.gif"></p>
+
+
 
 
 ## CLI Tool Examples
