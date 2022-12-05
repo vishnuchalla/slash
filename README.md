@@ -89,7 +89,7 @@ Currently the tool supports the following flags and command line arguments. Thes
 
 :card_index_dividers: Some Examples
 ---
-
+Detailed Examples along with videos have been documented at [EXAMPLES.md](./EXAMPLES.md)
 
 :thought_balloon: Use Case
 ---
