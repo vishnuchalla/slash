@@ -4,7 +4,7 @@
 
 ![License](https://img.shields.io/github/license/vamsitadikonda/slash)
 ![github workflow](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7158813.svg)](https://doi.org/10.5281/zenodo.7158813)
+[![DOI](https://zenodo.org/badge/568663442.svg)](https://zenodo.org/badge/latestdoi/568663442)
 ![GitHub issues](https://img.shields.io/github/issues-raw/vamsitadikonda/slash)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/vamsitadikonda/slash)
 ![Github pull requests](https://img.shields.io/github/issues-pr/vamsitadikonda/slash)
