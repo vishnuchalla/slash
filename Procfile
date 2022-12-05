@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath src api_endpoints:app
+web: gunicorn --chdir ./src/api api_endpoints:app
