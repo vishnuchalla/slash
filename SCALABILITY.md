@@ -18,3 +18,18 @@ These optimizations have lead to the query being 10 times faster than the initia
 
 *All the above Experimental run results have been mentioned below for your reference. All the experiments were run on a macbook pro laptop with the same Internet Connection.
 
+
+### How to scale it to 100 times ?
+
+We have already optimized the code to reduce the latency. Now we need to scale the system to handle more requests at a single time. To accommodate more traffic we can use vertical scaling by increasing the available computational power, RAM, and bandwidth of the existing nodes of the system to make the system accommodate 10 times more requests than before. 10 times more traffic requests is easy to increase using vertical scaling. So once we are able to achieve that, the system now is in a position to handle 100 times more requests than the initial benchmarks. 
+
+Initial benchmarks: 
+Latency for 1 query = 27.881844 seconds
+I.e, in 28 seconds 1 query is getting served
+Code optimization:
+After optimization of code latency for 1 query = 02.263997 seconds
+That means in 28 seconds the system is able handle 10 times more requests
+Vertical Scaling:
+As we add more RAM to the system to make room for 10 times more requests, it means that in 28 seconds the system will handle 100 times more requests than the initial benchmark.
+As there is a limitation to vertical scaling because of the hardware capabilities restriction, we can only scale till a certain point using vertical scaling.
+
