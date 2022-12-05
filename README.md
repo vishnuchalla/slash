@@ -265,9 +265,18 @@ Done :)
 
 :open_file_folder: Document Generated
 ---
-To have a better understanding of the code, please click on the [link](https://sumanthbsundar.github.io/slash_doc/) provided below.
+To have a better understanding of the code, please click on the [link](https://www.vamsitadikonda.com/slash/) provided below.
 
-[Github Pages](https://sumanthbsundar.github.io/slash_doc/)
+[Github Pages](https://www.vamsitadikonda.com/slash/)
+
+
+:gear: Technologies used
+---
+<img src="https://drive.google.com/uc?export=view&id=1jREu_hnGJ1gxv6hx2KMmM1zzHc8Yhvdh" alt="python" width="20" height="20"/> Python </br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="React" width="20" height="20"/> React </br>
+<img src="./assets/flask.png" alt="Flask" width="20" height="20"/> Flask </br>
+<img src="./assets/heroku.svg" alt="Heroku" width="20" height="20"/> Heroku </br>
+<img src="./assets/netlify.png" alt="Netlify" width="20" height="20"/> Netlify </br>
 
 
 :sparkles: Contributors
@@ -275,15 +284,15 @@ To have a better understanding of the code, please click on the [link](https://s
 
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/srujanponnur">Srujan Ponnur</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/sumanth-somasundar">Sumanth Somasundar</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/vishnuchalla/">Vishnu Challa</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/svnsairam/">Sairam Sakhamuri</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/kanchan-rawat-793753a2/">Kanchan Rawat</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/vamsitadikonda">Vamsi Tadikonda</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/swimitha-buchannolla-52114b120">Swimitha Buchanolla</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/vinay-perolla">Vinay Kumar Reddy Perolla</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/bharathkatabathuni">Bharath Katabathuni</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/saisree4">Sai Sree Nalluru</a></td>
   </tr>
 </table>
 
 :email: Support
 ---
 
-For any queries and help, please reach out to us at: vchalla2@ncsu.edu
+For any queries and help, please reach out to us at: vamsitadikonda99@gmail.com
