@@ -35,6 +35,8 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
   
   <li><a href="#page_facing_up-why">Why</a></li>
   
+  <li><a href="#gear">Technologies</a></li>
+
   <li><a href="#sparkles-contributors">Contributors</a></li>
   
   <li><a href="#email-support">Support</a></li>
@@ -49,25 +51,9 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 
 :rocket: Installation
 ---
-1. Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then ```cd``` into the local repository.
-```
-git clone https://github.com/vishnuchalla/slash
-cd slash
-```
-2. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of those.
-```
-pip3 install -r requirements.txt
-```
-3. Once all the requirements are installed, you will have to ```cd``` into the ```src``` folder. Once in the ```src``` folder, use the python command to run the ```slash.py``` file.
-```
-cd src
+A detailed description of how to install the software is shown [INSTALL.md](./INSTALL.md)
 
-For Mac
-python3 slash.py --search icecream
 
-For Windows
-python slash.py --search icecream
-```
 :golf: Flags and Command Line Arguments
 ---
 Currently the tool supports the following flags and command line arguments. These flags and arguments can be used to quickly filter and guide the search to get you the best results very quickly.
