@@ -25,7 +25,11 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 - **Informative**: Provides the information about items through an email with attached csv file
 
 <ul align="left">
+  <li> <a href="#iphone-our-products">Our Products</a> </li>
+
   <li> <a href="#rocket-new-improvements">New Improvements</a> </li>
+
+  <li> <a href="#chart_with_upwards_trend-benchmarks-and-scalability">Benchmarks & Scalability</a> </li>
 
   <li> <a href="#wrench-installation">Installation</a> </li>
   
@@ -46,8 +50,8 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 </ul>
 
 ---
-:iphone: Products
-
+:iphone: Our Products
+---
 ### Slash Website
 <p align="center"><img width="700" src="./assets/slash_web_demo_1.gif"></p>
 
@@ -65,10 +69,15 @@ The latest version of Slash has a lot of new Improvements.
 
 1. For Starters, We have designed a new website which can be easily accessed by anyone.
 2. We have released a REST API version of the Slash which can be used by anyone to plugin the results to their applications. 
-3. The Application is now **13 times faster** than the previous version. The improvements have been possible by optimizing the webscraping process using multithreading and shifting to a faster HTML parser. 
+3. The Application is now **13 times faster** than the previous version (more info at SCALABILITY.md). The improvements have been possible by optimizing the webscraping process using multithreading and shifting to a faster HTML parser. 
 The improvements have been made across all the products (Website, REST Api, CLI Tool).
 4. The REST API can be accessed using ```https://slash-app.herokuapp.com/slash```
 5. The Slash Website can be accessed from ```https://tinyurl.com/slash-app```
+
+:chart_with_upwards_trend:  Benchmarks and Scalability
+---
+Our code optimizations and benchmark results while developing the application are mentioned in [SCALABILITY.md](./SCALABILITY.md)  
+
 
 :wrench: Installation
 ---
