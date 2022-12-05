@@ -25,7 +25,9 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 - **Informative**: Provides the information about items through an email with attached csv file
 
 <ul align="left">
-  <li> <a href="#rocket-new-improvements">New Improvements</a> </li>
+  <li> <a href="#iphone-our-products">Our Products</a> </li>
+
+<li> <a href="#rocket-new-improvements">New Improvements</a> </li>
 
   <li> <a href="#wrench-installation">Installation</a> </li>
   
@@ -46,8 +48,8 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 </ul>
 
 ---
-:iphone: Products
-
+:iphone: Our Products
+---
 ### Slash Website
 <p align="center"><img width="700" src="./assets/slash_web_demo_1.gif"></p>
 
