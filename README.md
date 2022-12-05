@@ -10,6 +10,11 @@
 ![Github pull requests](https://img.shields.io/github/issues-pr/vamsitadikonda/slash)
 ![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vamsitadikonda/slash)
 [![GitHub Release](https://img.shields.io/github/release/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash/releases/)
+![Lines of code](https://img.shields.io/tokei/lines/github/vamsitadikonda/slash)
+[![codecov](https://codecov.io/gh/vamsitadikonda/slash/branch/main/graph/badge.svg?token=2FKRG4OBIV)](https://codecov.io/gh/vamsitadikonda/slash)
+[![languages](https://img.shields.io/github/languages/count/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash)
+[![forks](https://img.shields.io/github/forks/vamsitadikonda/slash?style=social)](https://github.com/vamsitadikonda/slash/network/members)
+[![Build](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/slash/actions)
 
 
 
