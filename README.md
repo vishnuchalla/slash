@@ -46,7 +46,16 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 </ul>
 
 ---
+:iphone: Products
 
+### Slash Website
+<p align="center"><img width="700" src="./assets/slash_web_demo_1.gif"></p>
+
+### Slash REST API 
+
+<p align="center"><img width="700" src="./assets/slash_rest_demo_1.gif"></p>
+
+### Slash CLI Tool
 <p align="center"><img width="700" src="./assets/DemoGif.gif"></p>
 
 
@@ -58,8 +67,8 @@ The latest version of Slash has a lot of new Improvements.
 2. We have released a REST API version of the Slash which can be used by anyone to plugin the results to their applications. 
 3. The Application is now **13 times faster** than the previous version. The improvements have been possible by optimizing the webscraping process using multithreading and shifting to a faster HTML parser. 
 The improvements have been made across all the products (Website, REST Api, CLI Tool).
-4. The REST API can be accessed using https://slash-app.herokuapp.com/slash
-5. The Slash Website can be accessed from https://tinyurl.com/slash-app 
+4. The REST API can be accessed using ```https://slash-app.herokuapp.com/slash```
+5. The Slash Website can be accessed from ```https://tinyurl.com/slash-app```
 
 :wrench: Installation
 ---
