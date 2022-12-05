@@ -15,7 +15,7 @@
 [![languages](https://img.shields.io/github/languages/count/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash)
 [![forks](https://img.shields.io/github/forks/vamsitadikonda/slash?style=social)](https://github.com/vamsitadikonda/slash/network/members)
 [![Build](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/slash/actions)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c64cb988-1dd7-44b7-9e40-98edeeaa26ef/deploy-status)](https://app.netlify.com/sites/snazzy-paletas-57b407/deploys)
 
 
 Slash is a command line tool that scrapes the most popular e-commerce websites to get the best deals on the searched items across these websites. 
