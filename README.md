@@ -2,15 +2,21 @@
 
 **Shopping Made Easy**
 
-![GitHub](https://img.shields.io/github/license/vishnuchalla/slash)
-![github workflow](https://github.com/secheaper/cheaper/actions/workflows/python-app.yml/badge.svg) 
+![License](https://img.shields.io/github/license/vamsitadikonda/slash)
+![github workflow](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7158813.svg)](https://doi.org/10.5281/zenodo.7158813)
-![Github](https://img.shields.io/badge/language-python-red.svg)
-![GitHub issues](https://img.shields.io/github/issues-raw/vishnuchalla/slash)
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/vishnuchalla/slash)
-![Github pull requests](https://img.shields.io/github/issues-pr/vishnuchalla/slash)
-![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vishnuchalla/slash)
-[![codecov](https://codecov.io/gh/vishnuchalla/slash/branch/main/graph/badge.svg?token=VO0F809CJT)](https://codecov.io/gh/vishnuchalla/slash)
+![GitHub issues](https://img.shields.io/github/issues-raw/vamsitadikonda/slash)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/vamsitadikonda/slash)
+![Github pull requests](https://img.shields.io/github/issues-pr/vamsitadikonda/slash)
+![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vamsitadikonda/slash)
+[![GitHub Release](https://img.shields.io/github/release/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash/releases/)
+![Lines of code](https://img.shields.io/tokei/lines/github/vamsitadikonda/slash)
+[![codecov](https://codecov.io/gh/vamsitadikonda/slash/branch/main/graph/badge.svg?token=2FKRG4OBIV)](https://codecov.io/gh/vamsitadikonda/slash)
+[![languages](https://img.shields.io/github/languages/count/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash)
+[![forks](https://img.shields.io/github/forks/vamsitadikonda/slash?style=social)](https://github.com/vamsitadikonda/slash/network/members)
+[![Build](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/slash/actions)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c64cb988-1dd7-44b7-9e40-98edeeaa26ef/deploy-status)](https://app.netlify.com/sites/snazzy-paletas-57b407/deploys)
+
 
 Slash is a command line tool that scrapes the most popular e-commerce websites to get the best deals on the searched items across these websites. 
 - **Fast**: With slash, you can save over 50% of your time by comparing deals across websites within seconds
