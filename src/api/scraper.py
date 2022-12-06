@@ -3,21 +3,20 @@ Copyright (C) 2021 SE Slash - All Rights Reserved
 You may use, distribute and modify this code under the
 terms of the MIT license.
 You should have received a copy of the MIT license with
-this file. If not, please write to: secheaper@gmail.com
+this file. If not, please write to: vamsitadikonda99@gmail.com
 
-"""
-"""
 The scraper module holds functions that actually scrape the e-commerce websites
 """
 
 import requests
 import formatter
 from bs4 import BeautifulSoup
+from selectolax.parser import HTMLParser
 
 
 def httpsGet(URL):
     """
-    The httpsGet funciton makes HTTP called to the requested URL with custom headers
+    The httpsGet function makes HTTP called to the requested URL with custom headers
     return: scraped html content from the URL
     """
     headers = {
@@ -31,9 +30,7 @@ def httpsGet(URL):
         "Upgrade-Insecure-Requests": "1"
     }
     page = requests.get(URL, headers=headers)
-    soup1 = BeautifulSoup(page.content, "html.parser")
-
-    return BeautifulSoup(soup1.prettify(), "html.parser")
+    return page.content
 
 
 def httpsGetTarget(URL, query):
@@ -95,7 +92,7 @@ def httpsGetTarget(URL, query):
     return results_json
 
 
-def searchAmazon(query, linkFlag):
+def searchAmazon(query, linkFlag, product_queue, limit=3):
     """
     The searchAmazon function scrapes amazon.com
     :param query: search keyword to perform the query
@@ -104,22 +101,27 @@ def searchAmazon(query, linkFlag):
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.amazon.com/s?k={query}'
     page = httpsGet(URL)
-    results = page.findAll("div", {"data-component-type": "s-search-result"})
-    products = []
-    for res in results:
-        titles, prices, links = res.select("h2 a span"), res.select(
-            "span.a-price span"), res.select("h2 a.a-link-normal")
-        ratings = res.select("span.a-icon-alt")
-        product = formatter.formatResult("amazon", titles, prices, links,
-                                         ratings)
-        if not linkFlag:
-            del product["link"]
-        if prices is not None:
-            products.append(product)
-    return products
+    tree = HTMLParser(page)
+    cnt = 0
+    for node in tree.tags("div"):
+        if 'data-component-type' in node.attributes and node.attributes[
+                'data-component-type'] == "s-search-result":
+            title = node.css_first("h2 a span").text()
+            price = node.css_first("span.a-price span").text()
+            link = node.css_first("h2 a.a-link-normal").text()
+            rating = node.css_first("span.a-icon-alt").text()
+            product = formatter.formatResult1("amazon", title, price, link,
+                                              rating)
+            if not linkFlag:
+                del product["link"]
+            if price is not None:
+                product_queue.put(product)
+            cnt += 1
+            if cnt == limit:
+                break
 
 
-def searchWalmart(query, linkFlag):
+def searchWalmart(query, linkFlag, product_queue, limit=3):
     """
     The searchWalmart function scrapes walmart.com
     :param query: search keyword to perform the query
@@ -128,26 +130,30 @@ def searchWalmart(query, linkFlag):
     query = formatter.formatSearchQuery(query)
     URL = f'https://www.walmart.com/search?q={query}'
     page = httpsGet(URL)
-    results = page.findAll("div", {"data-item-id": True})
-    products = []
-    for res in results:
-        titles, prices, links = res.select("span.lh-title"), res.select(
-            "div.lh-copy"), res.select("a")
-        ratings = res.select("span.w_EU")
-        if len(ratings) > 2:
-            ratings = [ratings[2]]
-        else:
-            ratings = None
-        product = formatter.formatResult("walmart", titles, prices, links,
-                                         ratings)
-        if not linkFlag:
-            del product["link"]
-        if prices is not None:
-            products.append(product)
-    return products
+    tree = HTMLParser(page)
+    cnt = 0
+    for node in tree.tags("div"):
+        if 'data-item-id' in node.attributes:
+            title = node.css_first("span.lh-title").text() if node.css_first(
+                "span.lh-title") else None
+            price = node.css_first("div.lh-copy").text() if node.css_first(
+                "div.lh-copy") else None
+            link = node.css_first("a").attributes["href"] if node.css_first(
+                "a") else None
+            rating = node.css_first("span.w_EU").text() if node.css_first(
+                "span.w_EU") else None
+            product = formatter.formatResult1("walmart", title, price, link,
+                                              rating)
+            if not linkFlag:
+                del product["link"]
+            if price is not None:
+                product_queue.put(product)
+            cnt += 1
+            if cnt == limit:
+                break
 
 
-def searchTarget(query, linkFlag):
+def searchTarget(query, linkFlag, product_queue, limit=3):
     """
     The searchTarget function scrapes hidden API of target.com
     :param query: search keyword to perform the query
@@ -158,6 +164,7 @@ def searchTarget(query, linkFlag):
     page = httpsGetTarget(URL, query)
     results = page['data']['search']['products']
     products = []
+    cnt = 0
     for idx in range(len(results)):
         titles = results[idx]['item']['product_description']['title'].replace(
             '&#8482;', '')
@@ -178,5 +185,7 @@ def searchTarget(query, linkFlag):
         if not linkFlag:
             del product["link"]
         if prices is not None:
-            products.append(product)
-    return products
+            product_queue.put(product)
+        cnt += 1
+        if cnt == limit:
+            break

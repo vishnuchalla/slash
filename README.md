@@ -2,15 +2,21 @@
 
 **Shopping Made Easy**
 
-![GitHub](https://img.shields.io/github/license/vishnuchalla/slash)
-![github workflow](https://github.com/secheaper/cheaper/actions/workflows/python-app.yml/badge.svg) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7158813.svg)](https://doi.org/10.5281/zenodo.7158813)
-![Github](https://img.shields.io/badge/language-python-red.svg)
-![GitHub issues](https://img.shields.io/github/issues-raw/vishnuchalla/slash)
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/vishnuchalla/slash)
-![Github pull requests](https://img.shields.io/github/issues-pr/vishnuchalla/slash)
-![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vishnuchalla/slash)
-[![codecov](https://codecov.io/gh/vishnuchalla/slash/branch/main/graph/badge.svg?token=VO0F809CJT)](https://codecov.io/gh/vishnuchalla/slash)
+![License](https://img.shields.io/github/license/vamsitadikonda/slash)
+![github workflow](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg) 
+[![DOI](https://zenodo.org/badge/568663442.svg)](https://zenodo.org/badge/latestdoi/568663442)
+![GitHub issues](https://img.shields.io/github/issues-raw/vamsitadikonda/slash)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/vamsitadikonda/slash)
+![Github pull requests](https://img.shields.io/github/issues-pr/vamsitadikonda/slash)
+![Github closed pull requests](https://img.shields.io/github/issues-pr-closed/vamsitadikonda/slash)
+[![GitHub Release](https://img.shields.io/github/release/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash/releases/)
+![Lines of code](https://img.shields.io/tokei/lines/github/vamsitadikonda/slash)
+[![codecov](https://codecov.io/gh/vamsitadikonda/slash/branch/main/graph/badge.svg?token=2FKRG4OBIV)](https://codecov.io/gh/vamsitadikonda/slash)
+[![languages](https://img.shields.io/github/languages/count/vamsitadikonda/slash)](https://github.com/vamsitadikonda/slash)
+[![forks](https://img.shields.io/github/forks/vamsitadikonda/slash?style=social)](https://github.com/vamsitadikonda/slash/network/members)
+[![Build](https://github.com/vamsitadikonda/slash/actions/workflows/python-app.yml/badge.svg)](https://github.com/vamsitadikonda/slash/actions)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c64cb988-1dd7-44b7-9e40-98edeeaa26ef/deploy-status)](https://app.netlify.com/sites/snazzy-paletas-57b407/deploys)
+
 
 Slash is a command line tool that scrapes the most popular e-commerce websites to get the best deals on the searched items across these websites. 
 - **Fast**: With slash, you can save over 50% of your time by comparing deals across websites within seconds
@@ -19,7 +25,13 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 - **Informative**: Provides the information about items through an email with attached csv file
 
 <ul align="left">
-  <li> <a href="#rocket-installation">Installation</a> </li>
+  <li> <a href="#iphone-our-products">Our Products</a> </li>
+
+  <li> <a href="#rocket-new-improvements">New Improvements</a> </li>
+
+  <li> <a href="#chart_with_upwards_trend-benchmarks-and-scalability">Benchmarks & Scalability</a> </li>
+
+  <li> <a href="#wrench-installation">Installation</a> </li>
   
   <li> <a href="#golf-flags-and-command-line-arguments">Flags & Args</a> </li>
   
@@ -29,6 +41,8 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
   
   <li><a href="#page_facing_up-why">Why</a></li>
   
+  <li><a href="#gear-technologies-used">Technologies</a></li>
+
   <li><a href="#sparkles-contributors">Contributors</a></li>
   
   <li><a href="#email-support">Support</a></li>
@@ -36,32 +50,40 @@ Slash is a command line tool that scrapes the most popular e-commerce websites t
 </ul>
 
 ---
+:iphone: Our Products
+---
+### Slash Website
+<p align="center"><img width="700" src="./assets/slash_web_demo_1.gif"></p>
 
+### Slash REST API 
+
+<p align="center"><img width="700" src="./assets/slash_rest_demo_1.gif"></p>
+
+### Slash CLI Tool
 <p align="center"><img width="700" src="./assets/DemoGif.gif"></p>
 
+
+:rocket: New Improvements
 ---
+The latest version of Slash has a lot of new Improvements. 
 
-:rocket: Installation
+1. For Starters, We have designed a new website which can be easily accessed by anyone.
+2. We have released a REST API version of the Slash which can be used by anyone to plugin the results to their applications. 
+3. The Application is now **13 times faster** than the previous version (more info at SCALABILITY.md). The improvements have been possible by optimizing the webscraping process using multithreading and shifting to a faster HTML parser. 
+The improvements have been made across all the products (Website, REST Api, CLI Tool).
+4. The REST API can be accessed using ```https://slash-app.herokuapp.com/slash```
+5. The Slash Website can be accessed from ```https://tinyurl.com/slash-app```
+
+:chart_with_upwards_trend:  Benchmarks and Scalability
 ---
-1. Clone the Github repository to a desired location on your computer. You will need [git](https://git-scm.com/) to be preinstalled on your machine. Once the repository is cloned, you will then ```cd``` into the local repository.
-```
-git clone https://github.com/vishnuchalla/slash
-cd slash
-```
-2. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of those.
-```
-pip3 install -r requirements.txt
-```
-3. Once all the requirements are installed, you will have to ```cd``` into the ```src``` folder. Once in the ```src``` folder, use the python command to run the ```slash.py``` file.
-```
-cd src
+Our code optimizations and benchmark results while developing the application are mentioned in [SCALABILITY.md](./SCALABILITY.md)  
 
-For Mac
-python3 slash.py --search icecream
 
-For Windows
-python slash.py --search icecream
-```
+:wrench: Installation
+---
+A detailed description of how to install the software is shown [INSTALL.md](./INSTALL.md)
+
+
 :golf: Flags and Command Line Arguments
 ---
 Currently the tool supports the following flags and command line arguments. These flags and arguments can be used to quickly filter and guide the search to get you the best results very quickly.
@@ -76,170 +98,7 @@ Currently the tool supports the following flags and command line arguments. Thes
 
 :card_index_dividers: Some Examples
 ---
-
-#### 1. Searching
-```--search```  accepts one argument string which it uses to search and scrape the requested products on 
-the e-commerce websites. So, to use this, run the python script followed by the --search argument and the 
-search string. The search string should be in double quotes if it have two or more words. Example:
-```
-For Mac
-python3 slash.py --search "philips hue"
-
-For Windows
-python slash.py --search "philips hue"
-```
-```
-| timestamp                     | title                                       | price      | website   | rating   |
-|-------------------------------|---------------------------------------------|------------|-----------|----------|
-| 01/10/2022 13:56:08 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
-| 01/10/2022 13:56:08 EDT -0400 | Philips Hue White & Color Ambiance White... | $119.99    | amazon    | 4.7      |
-| 01/10/2022 13:56:08 EDT -0400 | PHILIPS Hue 2pk A19 LED Starter Kit with... | $69.99     | amazon    | 4.7      |
-| 01/10/2022 13:56:10 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | $49.68     | walmart   | N.A      |
-| 01/10/2022 13:56:10 EDT -0400 | Philips Hue 3-Pack 60W White Bluetooth S... | $69.00     | walmart   | N.A      |
-| 01/10/2022 13:56:10 EDT -0400 | Philips Hue LED 60-Watt White A19 Dimmab... | $52.99     | walmart   | N.A      |
-| 01/10/2022 13:56:10 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
-| 01/10/2022 13:56:10 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99    | target    | 4.63     |
-| 01/10/2022 13:56:10 EDT -0400 | Philips Hue A19 75W Smart LED Bulb          | $54.99     | target    | 4.3      |
-```
-#### 2. Sorting
-```--sort``` accepts one or more arguments that determine how the tool sorts and filters the requested products
-after scraping. The first value is used to initially sort and filter the results of the scraping. The arguments
-following the first one are not required but will be used to further sort the filtered results. Example:
-```
-For Mac
-python3 slash.py --search "philips hue" --sort pr
-
-For Windows
-python slash.py --search "philips hue" --sort pr
-```
-```
-| timestamp                     | title                                       | price      | website   | rating   |
-|-------------------------------|---------------------------------------------|------------|-----------|----------|
-| 01/10/2022 13:57:59 EDT -0400 | Philips Hue Econic Outdoor White & Color... | N.A        | amazon    | 4.8      |
-| 01/10/2022 13:57:59 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
-| 01/10/2022 13:58:01 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
-| 01/10/2022 13:57:59 EDT -0400 | Outdoor Low voltage Extension Cable for ... | $19.98     | amazon    | 4.7      |
-| 01/10/2022 13:58:01 EDT -0400 | Philips Hue White Ambiance A19 LED 60-Wa... | $21.88     | walmart   | N.A      |
-| 01/10/2022 13:58:01 EDT -0400 | Philips Hue White Ambiance A19 LED 60-Wa... | $21.97     | walmart   | N.A      |
-| 01/10/2022 13:58:01 EDT -0400 | Philips Hue White and Color Ambiance Blu... | $39.99     | target    | 3.42     |
-| 01/10/2022 13:58:01 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | $49.68     | walmart   | N.A      |
-| 01/10/2022 13:58:01 EDT -0400 | Philips Hue 2pk BR30 Warm-To-Cool LED Sm... | $49.99     | target    | 4.73     |
-```
-#### 3. Sort Order
-The ```--des``` flag can be set to sort the requested products in a non-increasing order. This flag will be 
-actually used when coupled with ```--sort``` and the default value taken is true. Example:
-```
-For Mac
-python3 slash.py --search "philips hue" --sort pr --des
-
-For Windows
-python slash.py --search "philips hue" --sort pr --des
-```
-```
-| timestamp                     | title                                       | price   | website   | rating   |
-|-------------------------------|---------------------------------------------|---------|-----------|----------|
-| 01/10/2022 13:59:09 EDT -0400 | 75" Gradient TV Lightstrip Entertainment... | $541.77 | amazon    | 4.3      |
-| 01/10/2022 13:59:09 EDT -0400 | Philips Hue 2-Pack Bluetooth Gradient Am... | $324.99 | amazon    | N.A      |
-| 01/10/2022 13:59:09 EDT -0400 | Philips Hue White and Color Ambiance Ext... | $323.95 | amazon    | N.A      |
-| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White and Color Ambiance A19... | $199.99 | walmart   | N.A      |
-| 01/10/2022 13:59:11 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99 | target    | 4.63     |
-| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White &#38; Color Ambiance D... | $179.99 | target    | 3.7      |
-| 01/10/2022 13:59:11 EDT -0400 | Philips Hue 4-Pack White and Color A19 M... | $159.99 | walmart   | N.A      |
-| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White & Color Ambiance Calla... | $149.99 | target    | 5.0      |
-| 01/10/2022 13:59:11 EDT -0400 | Philips Hue White A19 Smart Light Starte... | $81.86  | walmart   | N.A      |
-```
-
-#### 4. Result length
-The maximum number of results that are scraped from each website can be set using the ```--num``` argument. It accepts
-an integer value ```n``` and then returns ```n``` results from each website. Note that tool returns a maximum of 
-the value of ```n``` and the number of results on the webiste. By default this value is set to 3. Example:
-```
-For Mac
-python3 slash.py --search "philips hue" --num 5
-
-For Windows
-python slash.py --search "philips hue" --num 5
-```
-```
-| timestamp                     | title                                       | price      | website   | rating   |
-|-------------------------------|---------------------------------------------|------------|-----------|----------|
-| 01/10/2022 13:59:54 EDT -0400 | Amazon Basics 60W Equivalent, Soft White... | $14.99     | amazon    | 4.6      |
-| 01/10/2022 13:59:54 EDT -0400 | Philips Hue White & Color Ambiance White... | $119.99    | amazon    | 4.7      |
-| 01/10/2022 13:59:54 EDT -0400 | PHILIPS Hue 2pk A19 LED Starter Kit with... | $69.99     | amazon    | 4.7      |
-| 01/10/2022 13:59:54 EDT -0400 | Philips Hue White Filament Globe G25 LED... | $32.94     | amazon    | 4.7      |
-| 01/10/2022 13:59:54 EDT -0400 | Philips Hue White and Color Ambiance A19... | $99.99     | amazon    | 4.7      |
-| 01/10/2022 13:59:56 EDT -0400 | Philips Hue Smart Stand Alone Bridge, Hu... | $49.68     | walmart   | N.A      |
-| 01/10/2022 13:59:56 EDT -0400 | Philips Hue 3-Pack 60W White Bluetooth S... | $69.00     | walmart   | N.A      |
-| 01/10/2022 13:59:56 EDT -0400 | Philips Hue LED 60-Watt White A19 Dimmab... | $52.99     | walmart   | N.A      |
-| 01/10/2022 13:59:56 EDT -0400 | Philips Hue White A19 Smart Light Starte... | $81.86     | walmart   | N.A      |
-| 01/10/2022 13:59:56 EDT -0400 | Philips Hue White and Color Ambiance Sma... | $69.99     | walmart   | N.A      |
-| 01/10/2022 13:59:57 EDT -0400 | Philips Hue A19 75W Smart LED Bulb White    | $15.99     | target    | 4.44     |
-| 01/10/2022 13:59:57 EDT -0400 | Philips Hue 4pk White and Color Ambiance... | $199.99    | target    | 4.63     |
-| 01/10/2022 13:59:57 EDT -0400 | Philips Hue A19 75W Smart LED Bulb          | $54.99     | target    | 4.3      |
-| 01/10/2022 13:59:57 EDT -0400 | Philips Hue 2pk A19 LED Starter Kit with... | $69.99     | target    | 4.35     |
-| 01/10/2022 13:59:57 EDT -0400 | Philips Hue White &#38; Color Ambiance D... | $179.99    | target    | 3.7      |
-```
-
-#### 5. Link
-There is an option to display links int the output. Example:
-```
-For Mac
-python3 slash.py --search "philips hue" --link
-
-For Windows
-python slash.py --search "philips hue" --link
-```
-```
-| timestamp                     | title                                       | price   | website   |   rating | link                         |
-|-------------------------------|---------------------------------------------|---------|-----------|----------|------------------------------|
-| 07/10/2022 16:57:17 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2hf4nm8l |
-| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:57:17 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2hf4nm8l |
-| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:57:18 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2qjv6k8w |
-| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Solid Crew Soc... | $7.79   | target    |     4.71 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:57:18 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2qjv6k8w |
-| 07/10/2022 16:57:35 EDT -0400 | Pair of Thieves Men&#39;s Solid Crew Soc... | $7.79   | target    |     4.71 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:57:18 EDT -0400 | No Show Socks Women Low Socks Non Slip F... | $15.89  | amazon    |     4.5  | https://tinyurl.com/2khadfy2 |
-| 07/10/2022 16:57:35 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
-| 07/10/2022 16:57:18 EDT -0400 | No Show Socks Women Low Socks Non Slip F... | $15.89  | amazon    |     4.5  | https://tinyurl.com/2khadfy2 |
-| 07/10/2022 16:57:35 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
-
-Trying to send email notification to the customers if there are any...
-
-No email to send data. Hence not sending the email
-Done :)
-```
-
-#### 6. Email Notification
-There is an option to send emails to customers using a parameter that accepts a comma separated list of emails. Example:
-```
-For Mac
-python3 slash.py --search "philips hue" --link --email "vchalla2@ncsu.edu,sponnur@ncsu.edu"
-
-For Windows
-python slash.py --search "philips hue" --link --email "vchalla2@ncsu.edu,sponnur@ncsu.edu"
-```
-```
-| timestamp                     | title                                       | price   | website   |   rating | link                         |
-|-------------------------------|---------------------------------------------|---------|-----------|----------|------------------------------|
-| 07/10/2022 16:47:58 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2outdp6f |
-| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:47:58 EDT -0400 | mens Performance Cotton Cushioned Athlet... | $13.50  | amazon    |     4.5  | https://tinyurl.com/2outdp6f |
-| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $3.59   | target    |     4.79 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:47:58 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2dsl5uyc |
-| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $8.99   | target    |     4.65 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:47:58 EDT -0400 | Mens Socks, 6 Pairs Anti-Blister Cushion... | $15.99  | amazon    |     4.6  | https://tinyurl.com/2dsl5uyc |
-| 07/10/2022 16:48:15 EDT -0400 | Pair of Thieves Men&#39;s Cushion Crew S... | $8.99   | target    |     4.65 | https://tinyurl.com/2o5fx6az |
-| 07/10/2022 16:47:59 EDT -0400 | CelerSport Ankle Athletic Running Socks ... | $15.95  | amazon    |     4.7  | https://tinyurl.com/2en2jbsd |
-| 07/10/2022 16:48:15 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
-| 07/10/2022 16:47:59 EDT -0400 | CelerSport Ankle Athletic Running Socks ... | $15.95  | amazon    |     4.7  | https://tinyurl.com/2en2jbsd |
-| 07/10/2022 16:48:15 EDT -0400 | Signature Gold by GOLDTOE Men&#39;s Mode... | $9.35   | target    |     4.67 | https://tinyurl.com/2m5ec5nt |
-
-Trying to send email notification to the customers if there are any...
-
-Done :)
-```
+Detailed Examples along with videos have been documented at [EXAMPLES.md](./EXAMPLES.md)
 
 :thought_balloon: Use Case
 ---
@@ -259,9 +118,40 @@ Done :)
 
 :open_file_folder: Document Generated
 ---
-To have a better understanding of the code, please click on the [link](https://sumanthbsundar.github.io/slash_doc/) provided below.
+To have a better understanding of the code, please click on the [link](https://www.vamsitadikonda.com/slash/) provided below.
 
-[Github Pages](https://sumanthbsundar.github.io/slash_doc/)
+[Github Pages](https://www.vamsitadikonda.com/slash/)
+
+
+:gear: Technologies used
+---
+<img src="https://drive.google.com/uc?export=view&id=1jREu_hnGJ1gxv6hx2KMmM1zzHc8Yhvdh" alt="python" width="20" height="20"/> Python </br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="React" width="20" height="20"/> React </br>
+<img src="./assets/flask.png" alt="Flask" width="20" height="20"/> Flask </br>
+<img src="./assets/heroku.svg" alt="Heroku" width="20" height="20"/> Heroku </br>
+<img src="./assets/netlify.png" alt="Netlify" width="20" height="20"/> Netlify </br>
+
+
+## Directory Structure
+``` txt
+.github/workflows
+assets
+docs
+src
+tests
+.coverage
+.gitignore 
+CODE-OF-CONDUCT.md
+CONTRIBUTING.md
+EXAMPLES.md
+INSTALL.md
+LICENSE
+Procfile
+README.md
+SCALABILITY.md  
+requirements.txt
+setup.py 
+```
 
 
 :sparkles: Contributors
@@ -269,15 +159,15 @@ To have a better understanding of the code, please click on the [link](https://s
 
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/srujanponnur">Srujan Ponnur</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/sumanth-somasundar">Sumanth Somasundar</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/vishnuchalla/">Vishnu Challa</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/svnsairam/">Sairam Sakhamuri</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/kanchan-rawat-793753a2/">Kanchan Rawat</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/vamsitadikonda">Vamsi Tadikonda</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/swimitha-buchannolla-52114b120">Swimitha Buchannolla</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/vinay-perolla">Vinay Kumar Reddy Perolla</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/bharathkatabathuni">Bharath Katabathuni</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/saisree4">Sai Sree Nalluru</a></td>
   </tr>
 </table>
 
 :email: Support
 ---
 
-For any queries and help, please reach out to us at: vchalla2@ncsu.edu
+For any queries and help, please reach out to us at: vamsitadikonda99@gmail.com

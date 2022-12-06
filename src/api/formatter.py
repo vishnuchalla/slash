@@ -3,7 +3,7 @@ Copyright (C) 2021 SE Slash - All Rights Reserved
 You may use, distribute and modify this code under the
 terms of the MIT license.
 You should have received a copy of the MIT license with
-this file. If not, please write to: secheaper@gmail.com
+this file. If not, please write to: vamsitadikonda99@gmail.com
 
 """
 """
@@ -18,9 +18,58 @@ import re
 import pyshorteners
 
 
+def formatResult1(website, titles, prices, links, ratings):
+    """
+    The formatResult function takes the scraped HTML as input, and extracts the
+    necessary values from the HTML code. Ex. extracting a price '$19.99' from
+    a paragraph tag.
+    :param website: website to scrape
+    :param titles: title of the product
+    :param prices: price of the product
+    :param links: link of the product
+    :param ratings: ratings of the product
+    return: formatted result of the product
+    """
+
+    title, price, link, rating = '', '', '', ''  # the default values when the data is not available in scrapped
+    # websites
+    if website == "target":
+        title = titles
+        price = prices
+        link = links
+        rating = ratings
+    else:
+        if titles:
+            title = str(titles).strip()
+        if prices:
+            price = str(prices).strip()
+            price = re.search(r"\S+\d[\d,\.]*?\b", price)
+            price = price.group()
+        if links:
+            link = f'www.{website}.com{links}'
+        if ratings:
+            rating = str(ratings).split()[0]
+    link = linkShortener(link)
+    return {
+        'timestamp':
+        datetime.now(
+            pytz.timezone('US/Eastern')).strftime("%d/%m/%Y %H:%M:%S %Z %z"),
+        "title":
+        formatTitle(title),
+        "price":
+        price if price != '' else 'N.A',
+        "website":
+        website,
+        "rating":
+        rating if rating != '' else 'N.A',
+        "link":
+        link
+    }
+
+
 def formatResult(website, titles, prices, links, ratings):
     """
-    The formatResult function takes the scraped HTML as input, and extracts the 
+    The formatResult function takes the scraped HTML as input, and extracts the
     necessary values from the HTML code. Ex. extracting a price '$19.99' from
     a paragraph tag.
     :param website: website to scrape
@@ -36,7 +85,8 @@ def formatResult(website, titles, prices, links, ratings):
     if website == "target":
         title = titles
     else:
-        if titles: title = titles[0].get_text().strip()
+        if titles:
+            title = titles[0].get_text().strip()
 
     if website == "target":
         price = prices
