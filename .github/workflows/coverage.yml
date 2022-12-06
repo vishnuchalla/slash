@@ -1,26 +1,33 @@
 name: Running Code Coverage
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+       run:
+         working-directory: ./src/slash-react-app
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 2 
-
-    - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: slash-react-app/package-lock.json
+    - run: npm install --legacy-peer-deps
 
     - name: Install dependencies
       run: npm install
