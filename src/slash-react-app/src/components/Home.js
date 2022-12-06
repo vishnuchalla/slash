@@ -32,9 +32,14 @@ export default function Home() {
   const[num,setNumb]=useState('');
   const[email,setEmail]=useState('');
   const [error, setError] = useState(null);
+  const [fetchData, setFetchData] = useState(null);
   const [users, setUsers] = useState([])
   const classes = useStyles();
   const paperStyle ={padding:'50px 40px', width:400, margin:'155px auto'}
+
+  const validate = () => {
+    return search.length &&  num.length;
+  };
 
   function isValidEmail(email) {
     if(email==='')
@@ -42,7 +47,6 @@ export default function Home() {
     else
     return /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i.test(email);
   }
-
   const handleClick=(e)=>{
     e.preventDefault()
         if (!isValidEmail(email) && email!=='') {
@@ -58,6 +62,10 @@ export default function Home() {
         fetch(myurl)
    .then(response => response.json())
    .then(data => setUsers(data));
+   const x=(data=>setUsers(data));
+   if(x===''){
+   setFetchData('Unable to fetch data');
+      }
         console.log(email)
 
         if((data=>setUsers(data)!=='') && email!==''){
@@ -76,12 +84,13 @@ export default function Home() {
                 src="logo.png"
                 width="150"
                 style={{ marginRight: "1.5em"}}
-              /><br></br><br></br>
+              /><br></br>
     <form className={classes.root} noValidate autoComplete="off">
-    <TextField id="outlined-basic" placeholder="Search product here" variant="outlined" value={search} onChange={(e)=>setToSearch(e.target.value)} required="required" fullWidth/><br/><br/>
-    <TextField id="outlined-basic" type='number' placeholder="No of results to be displayed" variant="outlined" value={num} required="required" InputProps={{ inputProps: { min: 3, max: 20 } }}precision={ 0 } onChange={(e)=>setNumb(e.target.value)} fullWidth/><br/><br/>
-    <TextField id="outlined-basic" placeholder="Enter Email Id" variant="outlined" value={email} onChange={(e)=>setEmail(e.target.value)}  fullWidth/>{error && <h4 style={{color: 'red'}}>{error}</h4>}<br/><br/>
-    <Button variant="contained" color="primary" size="large" className={classes.button} onClick={handleClick}>Search <SearchIcon/></Button>
+    {fetchData && <h4 style={{color: 'red'}}>{fetchData}</h4>}
+    <TextField id="outlined-basic" label="Search product here" name="title" variant="outlined" value={search} required onChange={(e)=>setToSearch(e.target.value)} fullWidth/><br/><br/>
+    <TextField id="outlined-basic" type='number' label="No of results to be displayed" name="number" variant="outlined" value={num} required onChange={(e)=>setNumb(e.target.value)} InputProps={{ inputProps: { min: 3, max: 20 } }} precision={ 0 } fullWidth/><br/><br/>
+    <TextField id="outlined-basic" label="Enter Email Id" name="email" variant="outlined" value={email} onChange={(e)=>setEmail(e.target.value)}  fullWidth/>{error && <h4 style={{color: 'red'}}>{error}</h4>}<br/><br/>
+    <Button variant="contained" color="primary" size="large" className={classes.button} onClick={handleClick} disabled={!validate()}>Search <SearchIcon/></Button>
     </form>
     </Paper>
     </Container>
